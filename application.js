@@ -12,11 +12,33 @@ System.register([], function (_export, _context) {
     if (percent > percentJd) {
       percentJd = percent;
     }
-    var progressBar = splash.querySelector('.progress-bar span');
-    // var percent = 100 * finish / total;
-    if (progressBar) {
-      progressBar.style.width = "".concat(percent, "%");
+    var splash = document.getElementById('splash');
+    if (splash) {
+      var progressBar = splash.querySelector('.progress-bar span');
+      if (progressBar) {
+        progressBar.style.width = "".concat(percent, "%");
+        console.log("Loading progress: ".concat(percent, "%"));
+      }
     }
+  }
+
+  // Make onProgress globally accessible
+
+  // Start a slower, more realistic progress simulation
+  function startProgressSimulation() {
+    if (timer) {
+      clearInterval(timer);
+    }
+    timer = setInterval(function () {
+      if (percentJd < 85) {
+        // Stop at 85% to wait for actual game loading
+        percentJd += Math.random() * 3 + 1; // Random increment between 1-4%
+        onProgress(Math.min(percentJd, 85));
+      } else {
+        clearInterval(timer);
+        timer = null;
+      }
+    }, 200); // Faster updates for smoother animation
   }
 
   //------------End: updata Progress-----------------
@@ -25,20 +47,14 @@ System.register([], function (_export, _context) {
     execute: function () {
       //--------------- Start: updata Progress--------------
       percentJd = 0;
-      timer = setInterval(function () {
-        var now = new Date();
-        if (percentJd < 90) {
-          percentJd = percentJd + 1;
-          onProgress(percentJd);
-        } else {
-          clearInterval(timer);
-        }
-      }, 1000);
+      timer = null;
+      window.onProgress = onProgress;
       _export("Application", Application = /*#__PURE__*/function () {
         function Application() {
           _classCallCheck(this, Application);
           this.settingsPath = 'src/settings.json';
           this.showFPS = false;
+          this.timer = null;
         }
         _createClass(Application, [{
           key: "init",
@@ -46,23 +62,29 @@ System.register([], function (_export, _context) {
             cc = engine;
             cc.game.onPostBaseInitDelegate.add(this.onPostInitBase.bind(this));
             cc.game.onPostSubsystemInitDelegate.add(this.onPostSystemInit.bind(this));
+
+            // Start progress simulation when engine is initialized
+            startProgressSimulation();
+            this.timer = timer; // Store reference for cleanup
           }
         }, {
           key: "onPostInitBase",
           value: function onPostInitBase() {
             // cc.settings.overrideSettings('assets', 'server', '');
-            // do custom logic
+            // Update progress when base is initialized
+            onProgress(60);
           }
         }, {
           key: "onPostSystemInit",
           value: function onPostSystemInit() {
-            // do custom logic
+            // Update progress when subsystems are initialized
+            onProgress(75);
           }
         }, {
           key: "start",
           value: function start() {
-            // Manual Update
-            onProgress(50);
+            console.log('Starting Cocos game...');
+            onProgress(80);
             return cc.game.init({
               debugMode: false ? cc.DebugMode.INFO : cc.DebugMode.ERROR,
               settingsPath: this.settingsPath,
@@ -75,7 +97,12 @@ System.register([], function (_export, _context) {
                 }
               }
             }).then(function () {
+              console.log('Game initialized, starting to run...');
+              onProgress(90);
               return cc.game.run();
+            }).then(function () {
+              console.log('Game is running');
+              onProgress(95);
             });
           }
         }]);
