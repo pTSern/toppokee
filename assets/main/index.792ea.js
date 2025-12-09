@@ -442,7 +442,7 @@ System.register("chunks:///_virtual/AlertDialog.ts", ['./rollupPluginModLoBabelH
   };
 });
 
-System.register("chunks:///_virtual/AlwayCenter.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Enums.ts', './ComponentUtils.ts', './Constants.ts'], function (exports) {
+System.register("chunks:///_virtual/AlwayCenter.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Enums.ts', './ComponentUtils.ts', './Constants2.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createClass, cclegacy, _decorator, Node, Enum, UITransform, v3, Component, EComponentInvokeOptions, pComponentUtils, CCGroup;
   return {
     setters: [function (module) {
@@ -2479,7 +2479,7 @@ System.register("chunks:///_virtual/AvatarItem.ts", ['./rollupPluginModLoBabelHe
   };
 });
 
-System.register("chunks:///_virtual/BaseStorage.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Constants.ts', './EventManager.ts', './ArrayUtils.ts', './JsonUtils.ts'], function (exports) {
+System.register("chunks:///_virtual/BaseStorage.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Constants2.ts', './EventManager.ts', './ArrayUtils.ts', './JsonUtils.ts'], function (exports) {
   var _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, dStorageObject, pEventManager, pArray, JsonUtils;
   return {
     setters: [function (module) {
@@ -4167,7 +4167,7 @@ System.register("chunks:///_virtual/ComponentUtils.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("chunks:///_virtual/Connection.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Constants.ts', './Decorators.ts', './StringUtils.ts', './toppoker.mjs_cjs=&original=.js', './toppoker.js'], function (exports) {
+System.register("chunks:///_virtual/Connection.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Constants2.ts', './Decorators.ts', './StringUtils.ts', './toppoker.mjs_cjs=&original=.js', './toppoker.js'], function (exports) {
   var _createClass, cclegacy, MACRO, pDecorators, pStringUtils, _cjsExports;
   return {
     setters: [function (module) {
@@ -4229,7 +4229,31 @@ System.register("chunks:///_virtual/Connection.ts", ['./rollupPluginModLoBabelHe
   };
 });
 
-System.register("chunks:///_virtual/Constants.ts", ['cc', './Enums.ts', './env'], function (exports) {
+System.register("chunks:///_virtual/constants.ts", ['cc'], function (exports) {
+  var cclegacy;
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "d8e8dXqNkFGUaIWmSgmNuNt", "constants", undefined);
+      var constants = exports('constants', {
+        TYPES: {
+          uInt32: 0,
+          sInt32: 0,
+          int32: 0,
+          "double": 1,
+          string: 2,
+          message: 2,
+          "float": 5
+        }
+      });
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/Constants2.ts", ['cc', './Enums.ts', './env'], function (exports) {
   var cclegacy, Enum, ECardRank, EGameState, ENumberPlayerCount, BUILD;
   return {
     setters: [function (module) {
@@ -4552,30 +4576,6 @@ System.register("chunks:///_virtual/Constants.ts", ['cc', './Enums.ts', './env']
           maxPlayers: ENumberPlayerCount.FIVE_PLAYERS,
           gameMode: 'normal'
         }]
-      });
-      cclegacy._RF.pop();
-    }
-  };
-});
-
-System.register("chunks:///_virtual/constants2.ts", ['cc'], function (exports) {
-  var cclegacy;
-  return {
-    setters: [function (module) {
-      cclegacy = module.cclegacy;
-    }],
-    execute: function () {
-      cclegacy._RF.push({}, "d8e8dXqNkFGUaIWmSgmNuNt", "constants", undefined);
-      var constants = exports('constants', {
-        TYPES: {
-          uInt32: 0,
-          sInt32: 0,
-          int32: 0,
-          "double": 1,
-          string: 2,
-          message: 2,
-          "float": 5
-        }
       });
       cclegacy._RF.pop();
     }
@@ -5411,7 +5411,7 @@ System.register("chunks:///_virtual/debug-view-runtime-control.ts", ['./rollupPl
   };
 });
 
-System.register("chunks:///_virtual/Decorators.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventManager.ts', './ArrayUtils.ts', './Constants.ts'], function (exports) {
+System.register("chunks:///_virtual/Decorators.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventManager.ts', './ArrayUtils.ts', './Constants2.ts'], function (exports) {
   var _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, _construct, cclegacy, js, director, cc, Component, pEventManager, pArray, MACRO;
   return {
     setters: [function (module) {
@@ -9282,7 +9282,7 @@ System.register("chunks:///_virtual/FriendManager.ts", ['./rollupPluginModLoBabe
   };
 });
 
-System.register("chunks:///_virtual/GameController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './IEventResponse.ts', './Decorators.ts', './UIGamePlay.ts', './GlobalConfig.ts', './UIPlayingScene.ts', './ResponeCode.ts', './Enums.ts', './EventManager.ts', './UIHistoryChatManager.ts', './AsyncUtils.ts', './LanguageManager.ts', './UpdateManager.ts', './GameManager.ts', './ArrayUtils.ts', './UserCommand.ts', './StringUtils.ts', './Constants.ts'], function (exports) {
+System.register("chunks:///_virtual/GameController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './IEventResponse.ts', './Decorators.ts', './UIGamePlay.ts', './GlobalConfig.ts', './UIPlayingScene.ts', './ResponeCode.ts', './Enums.ts', './EventManager.ts', './UIHistoryChatManager.ts', './AsyncUtils.ts', './LanguageManager.ts', './UpdateManager.ts', './GameManager.ts', './ArrayUtils.ts', './UserCommand.ts', './StringUtils.ts', './Constants2.ts'], function (exports) {
   var _createForOfIteratorHelperLoose, _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, NSEventResponse, pDecorators, UIGamePlay, GlobalConfig, UIPlayingScene, ResponseCode, EStatusGame, EStatusPlayer, EGameState, pEventManager, UIHistoryChatManager, pAsyncUtils, LanguageMananger, UpdateManager, GameManager, pArray, request, pStringUtils, Duration;
   return {
     setters: [function (module) {
@@ -13874,7 +13874,7 @@ System.register("chunks:///_virtual/InfinityFx.ts", ['./rollupPluginModLoBabelHe
   };
 });
 
-System.register("chunks:///_virtual/InGameTutorial.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTutorial.ts', './UIItemPlayer.ts', './UICommunityCard.ts', './SkeletonSelector.ts', './UIGameAlert.ts', './UIGameLight.ts', './TypesLanguageManager.ts', './Enums.ts', './GlobalConfig.ts', './UICardsDealer.ts', './Decorators.ts', './UIGamePots.ts', './ComponentUtils.ts', './UIGameTutorial.ts', './NodeUtils.ts', './LanguageManager.ts', './StringUtils.ts', './AsyncUtils.ts', './UIPopupMoreBet.ts', './Constants.ts', './AudioManager.ts'], function (exports) {
+System.register("chunks:///_virtual/InGameTutorial.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTutorial.ts', './UIItemPlayer.ts', './UICommunityCard.ts', './SkeletonSelector.ts', './UIGameAlert.ts', './UIGameLight.ts', './TypesLanguageManager.ts', './Enums.ts', './GlobalConfig.ts', './UICardsDealer.ts', './Decorators.ts', './UIGamePots.ts', './ComponentUtils.ts', './UIGameTutorial.ts', './NodeUtils.ts', './LanguageManager.ts', './StringUtils.ts', './AsyncUtils.ts', './UIPopupMoreBet.ts', './Constants2.ts', './AudioManager.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, _createForOfIteratorHelperLoose, _createClass, cclegacy, _decorator, Node, Button, Label, GameTutorial, UIItemPlayer, UICommunityCard, NSSkeletonSelector, NSGameAlert, UIGameLight, CCELang, numberToTLang, ETypeModePlay, EAudioID, GlobalConfig, NSCardsDealer, pDecorators, NSGamePots, pComponentUtils, UIGameTutorial, pNodeUtils, LanguageMananger, pStringUtils, pAsyncUtils, UIPopupMoreBet, Duration, NSAudio;
   return {
     setters: [function (module) {
@@ -16326,7 +16326,7 @@ System.register("chunks:///_virtual/LogViewer.ts", ['./rollupPluginModLoBabelHel
   };
 });
 
-System.register("chunks:///_virtual/main", ['./debug-view-runtime-control.ts', './EventDefine.ts', './ProtocolDefine.ts', './ProtocolHandler.ts', './ProtocolHandlerMockTest.ts', './SocketService.ts', './Connection.ts', './ProtocolManager.ts', './Reconnector.ts', './codec.ts', './constants2.ts', './emitter.ts', './msg_decoder.ts', './msg_encoder.ts', './protobuf.ts', './protocol.ts', './toppoker.mjs_cjs=&original=.js', './toppoker.ts', './util.ts', './LogDisplayer.ts', './LogViewer.ts', './AsyncClasser.ts', './EventDriver.ts', './OnceOnly.ts', './PersistentNode.ts', './Constants.ts', './Enums.ts', './Global.ts', './NoticePoint.ts', './ResponeCode.ts', './SyncTarget.ts', './ToggleSameLabel.ts', './ToggleUpdateSize.ts', './UIBalance.ts', './EditorComponent.ts', './SharperLabel.ts', './Actioner.ts', './AnimationFX.ts', './FlippingCard.ts', './FlippingFX.ts', './FloatingMessageFX.ts', './IFlipableObject.ts', './InfinityFx.ts', './MovingFx.ts', './RotatingFx.ts', './RunningNumber.ts', './ScalingFx.ts', './SkewNode.ts', './SpawningFx.ts', './SpinCardFx.ts', './UIDynamicLabel.ts', './UIFlippingObject.ts', './UIPlayerBalanceUpdater.ts', './UIShortText.ts', './AChecker.ts', './AlwayCenter.ts', './AutoAlignCameras.ts', './AutoClose.ts', './BubbleChat.ts', './CaptchaHelper.ts', './ClassHelper.ts', './DynamicButton.ts', './HtmlText.ts', './MTTHelper.ts', './MiniLoading.ts', './NotifyLabel.ts', './SNGHelper.ts', './ShaderAplier.ts', './SkeletonSelector.ts', './UIAutoZSibling.ts', './UIButtonHelper.ts', './newFile.ts', './IAnimationFX.ts', './ICardInfo.ts', './IChatCommand.ts', './IChatData.ts', './IConnectorCommand.ts', './IDynamicData.ts', './IEnity.ts', './IEventBinder.ts', './IEventResponse.ts', './IFlexCreator.ts', './IGameCommand.ts', './IGameHistory.ts', './IGateCommand.ts', './IItemPlayer.ts', './IMTTCommand.ts', './IMTTResponse.ts', './IPlayerData.ts', './IPlayingScene.ts', './IRespones.ts', './ISNGCommand.ts', './ISNGResponse.ts', './ITableData.ts', './ITableMonitorCMD.ts', './ITableMonitorResponse.ts', './IUploadResponse.ts', './LangSelectorAPI.ts', './LanguageManager.ts', './MultiLanguage.ts', './NextMultiLanguage.ts', './TypesLanguageManager.ts', './ArticleCommand.ts', './AssetManager.ts', './AudioManager.ts', './ChatCommand.ts', './ClockChanger.ts', './CommandManager.ts', './EngineManager.ts', './EntryCommand.ts', './EventManager.ts', './ExpCommand.ts', './FacebookManager.ts', './GameDebugger.ts', './GameManager.ts', './GamePausedManager.ts', './GateCommand.ts', './GlobalConfig.ts', './GoogleManager.ts', './LeaderBoardCommand.ts', './MTTCommand.ts', './MissionCommand.ts', './NotifyCommand.ts', './QuickAudioPlayer.ts', './SNGCommand.ts', './SafeBoxCommand.ts', './ShopCommand.ts', './SpinGameCommand.ts', './SupportCommand.ts', './TableCommand.ts', './TableMonitorCommand.ts', './TimeTreasureCommand.ts', './UIController.ts', './UpdateManager.ts', './UserCommand.ts', './pAndroid.ts', './GaussianBlur.ts', './GameData.ts', './INetwork.ts', './IStorage.ts', './BaseStorage.ts', './CryptoStorage.ts', './DBStorage.ts', './LocalStorage.ts', './TestButton.ts', './TMttTournament.ts', './TSngTournament.ts', './PokerRank.ts', './UICardType.ts', './UIBase.ts', './AlertDialog.ts', './UIGameAlert.ts', './UIPopupAlert.ts', './EditTextResized.ts', './FloatingNotice.ts', './NoticePopup.ts', './NotifyToast.ts', './UIChatItem.ts', './UIKeepScale.ts', './UILoadingScene.ts', './UINotice.ts', './UIPopup.ts', './UIPopupNotice.ts', './UIScale.ts', './UIScaleBG.ts', './UISlider.ts', './UIUpdateAlignment.ts', './LinkListToggle.ts', './NodePoolToggler.ts', './TogglerManager.ts', './UIKickPlayer.ts', './UIActionCard.ts', './UIAutoPlayer.ts', './UIAutoPlaying.ts', './UICardInfo.ts', './UIGameAction.ts', './UIGameActionManager.ts', './UIGamePots.ts', './UIItemDealerIngame.ts', './UIItemDetailHistory.ts', './UIItemHistory.ts', './UILobbyCompete.ts', './UIMiniRateCard.ts', './UIPTPopupInfoTable.ts', './UIPopupActionDealer.ts', './UIPopupChangeAccessory.ts', './UIPopupChangeTable.ts', './UIPopupDetailHistory.ts', './UIPopupDonateChip.ts', './UIPopupGiveGift.ts', './UIPopupHistory.ts', './UIPopupInvitePlayer.ts', './UIPopupInvitePlayerItem.ts', './UIPopupMiniGame.ts', './UIPopupRateCard.ts', './UIPopupSpinGame.ts', './UIProfilePlayerIngame.ts', './UISpinHistory.ts', './UISpinHistoryItem.ts', './UISpinRule.ts', './UITipChipFly.ts', './EngineController.ts', './GameController.ts', './MTTController.ts', './MTTGamePlayer.ts', './PlayingController.ts', './SNGConfig.ts', './SNGGamePlayer.ts', './SNGWinner.ts', './YardGamePlayer.ts', './DataRoomMTT.ts', './InterfaceConfigMTT.ts', './ItemPlayerData.ts', './MTTPlayerData.ts', './SNGPlayerData.ts', './YardPlayerData.ts', './UIItemLevelsBlind.ts', './UIItemMineTournMTT.ts', './UIItemRanker.ts', './UIItemReward.ts', './UIItemRoomMTT.ts', './UIMTTRankManager.ts', './UIMTTRanking.ts', './UIMttResult.ts', './UIMttTableSelector.ts', './UIMttTablesView.ts', './UIPageItemRoomMTT.ts', './UIPanelMineTournMTT.ts', './UIPopupHelpMTT.ts', './UIPopupInfoTournMTT.ts', './UIPopupSigupMTT.ts', './UIRebuyPopup.ts', './UIRoomMTT.ts', './ChatClickHandle.ts', './ItemEmoji.ts', './UICardConfig.ts', './UICardHand.ts', './UICardManager.ts', './UICardsDealer.ts', './UIChatBox.ts', './UIChatRuntime.ts', './UIChipPlayerSNG.ts', './UICommunityCard.ts', './UIEmojiChat.ts', './UIEmojis.ts', './UIFlexTable.ts', './UIGameDealer.ts', './UIGameInfo.ts', './UIGameLight.ts', './UIGamePlay.ts', './UIHistoryChat.ts', './UIHistoryChatItem.ts', './UIHistoryChatManager.ts', './UIHistoryPlayer.ts', './UIItemCard.ts', './UIItemPlayer.ts', './UIItemPlayerManager.ts', './UIItemPlayerSNG.ts', './UIItemRoomSNG.ts', './UIPlayer.ts', './UIPlayerInfor.ts', './UIPlayerStatus.ts', './UIPlayingScene.ts', './UIPopupBuyChip.ts', './UIPopupChat.ts', './UIPopupHelpSNG.ts', './UIPopupMoreBet.ts', './UIPopupResultEndGame.ts', './UIPopupSettingInGame.ts', './UIQuickChat.ts', './UIRoomSNG.ts', './UIStandUpRegister.ts', './UIChestReward.ts', './UIItemCardFace.ts', './UIPanelChangeCardBack.ts', './UIPanelChangeCardFace.ts', './UIPanelChangeDealer.ts', './UIPanelChangeTitle.ts', './UIPanelHistory.ts', './UIPopupCardFace.ts', './RoomItemData.ts', './UIPTPageRoom.ts', './UIPTRoomItem.ts', './UIPTYard.ts', './UIPTPopupAlertVip.ts', './UIPTPopupCreatePrivateRoom.ts', './UIPTPopupCreateSuccesAlert.ts', './UIPTPopupFilterRoomType.ts', './UIPTPopupHelp.ts', './UIPTPopupJoinPrivateRoom.ts', './UIPTPopupSearchRoom.ts', './UIEmailRegister.ts', './UILogin.ts', './UILoginApple.ts', './UILoginAsGuest.ts', './UILoginChangePhoneZone.ts', './UILoginEmail.ts', './UILoginFB.ts', './UILoginForgotPassword.ts', './UILoginGoogle.ts', './UIReconnect.ts', './AvatarItem.ts', './PhoneZoneItem.ts', './MainScreenController.ts', './UIFloatingMessage.ts', './UIInvitedToPlay.ts', './UIMainScreen.ts', './UIBanner.ts', './UIEmail.ts', './UIItemEmail.ts', './UIItemNotifi.ts', './UIEvent.ts', './UIItemEventPage.ts', './FriendManager.ts', './UIFriend.ts', './UIFriendChat.ts', './UIFriendItem.ts', './UIFriendProfile.ts', './UIGiveAwayItem.ts', './UIPopupGiveAway.ts', './UIEmailIconCounter.ts', './UINoticeIconCounter.ts', './UIMission.ts', './UIMissionItem.ts', './UIMore.ts', './UIAchievement.ts', './UIBtnLoadAvatar.ts', './UIChooseAvatarItem.ts', './UIItemAchievement.ts', './UIMiniProfile.ts', './UINoticeAchievement.ts', './UIProfile.ts', './UIProfileAchievement.ts', './UIProfileEdit.ts', './UIProfileSafe.ts', './UIResetPassword.ts', './UISafeboxPassword.ts', './UIRank.ts', './UIRankItem.ts', './UIRankPlayerInfo.ts', './UISetting.ts', './UISettingLanguage.ts', './UISettingLogOut.ts', './UISettingOther.ts', './UISettingPrivacy.ts', './UISettingRemoveAcc.ts', './UISettingRemoveCache.ts', './UIHistoryFeedbackItem.ts', './UISupport.ts', './UISupportItem.ts', './UISupportLevelRuleItem.ts', './UISupportTableLevelRule.ts', './CardTutorial.ts', './EndTurorial.ts', './GameTutorial.ts', './InGameTutorial.ts', './MainPropertyTut.ts', './MoverTutorial.ts', './NextTutoritalStep.ts', './StepButton.ts', './TipDealerTutorial.ts', './TutorialStep.ts', './TutorialTween.ts', './UIGamePlayTutorial.ts', './UIGameTutorial.ts', './UIRewardEndTutorial.ts', './UITutorial.ts', './UITutorialScene.ts', './ShopManager.ts', './UICardsPage.ts', './UIDefaultShopPage.ts', './UIGiftToFriends.ts', './UINavDefaultShopPage.ts', './UIPopupBuy.ts', './UIPurchasedShopPage.ts', './UIShop.ts', './UIShopPage.ts', './MyPropsItem.ts', './UICardItem.ts', './UIGiftFriendItem.ts', './UIItemPurchased.ts', './UINormalItem.ts', './UISpecialItem.ts', './UISplash.ts', './Dropdown.ts', './DropdownItem.ts', './ArrayUtils.ts', './AsyncUtils.ts', './BundleUtils.ts', './ClassUtils.ts', './ComponentUtils.ts', './CryptoUtils.ts', './DateUtils.ts', './Decorators.ts', './EnumUtils.ts', './FileUtils.ts', './GlobalUtils.ts', './HttpUtils.ts', './JsonUtils.ts', './MathUtils.ts', './NodeUtils.ts', './ObjectUtils.ts', './Pooler.ts', './RoundedRectMask.ts', './RoundedRectShaderController.ts', './StringUtils.ts', './TimeZone.ts', './ToggleUtil.ts'], function () {
+System.register("chunks:///_virtual/main", ['./debug-view-runtime-control.ts', './EventDefine.ts', './ProtocolDefine.ts', './ProtocolHandler.ts', './ProtocolHandlerMockTest.ts', './SocketService.ts', './Connection.ts', './ProtocolManager.ts', './Reconnector.ts', './codec.ts', './constants.ts', './emitter.ts', './msg_decoder.ts', './msg_encoder.ts', './protobuf.ts', './protocol.ts', './toppoker.mjs_cjs=&original=.js', './toppoker.ts', './util.ts', './LogDisplayer.ts', './LogViewer.ts', './AsyncClasser.ts', './EventDriver.ts', './OnceOnly.ts', './PersistentNode.ts', './Constants2.ts', './Enums.ts', './Global.ts', './NoticePoint.ts', './ResponeCode.ts', './SyncTarget.ts', './ToggleSameLabel.ts', './ToggleUpdateSize.ts', './UIBalance.ts', './EditorComponent.ts', './SharperLabel.ts', './Actioner.ts', './AnimationFX.ts', './FlippingCard.ts', './FlippingFX.ts', './FloatingMessageFX.ts', './IFlipableObject.ts', './InfinityFx.ts', './MovingFx.ts', './RotatingFx.ts', './RunningNumber.ts', './ScalingFx.ts', './SkewNode.ts', './SpawningFx.ts', './SpinCardFx.ts', './UIDynamicLabel.ts', './UIFlippingObject.ts', './UIPlayerBalanceUpdater.ts', './UIShortText.ts', './AChecker.ts', './AlwayCenter.ts', './AutoAlignCameras.ts', './AutoClose.ts', './BubbleChat.ts', './CaptchaHelper.ts', './ClassHelper.ts', './DynamicButton.ts', './HtmlText.ts', './MTTHelper.ts', './MiniLoading.ts', './NotifyLabel.ts', './SNGHelper.ts', './ShaderAplier.ts', './SkeletonSelector.ts', './UIAutoZSibling.ts', './UIButtonHelper.ts', './newFile.ts', './IAnimationFX.ts', './ICardInfo.ts', './IChatCommand.ts', './IChatData.ts', './IConnectorCommand.ts', './IDynamicData.ts', './IEnity.ts', './IEventBinder.ts', './IEventResponse.ts', './IFlexCreator.ts', './IGameCommand.ts', './IGameHistory.ts', './IGateCommand.ts', './IItemPlayer.ts', './IMTTCommand.ts', './IMTTResponse.ts', './IPlayerData.ts', './IPlayingScene.ts', './IRespones.ts', './ISNGCommand.ts', './ISNGResponse.ts', './ITableData.ts', './ITableMonitorCMD.ts', './ITableMonitorResponse.ts', './IUploadResponse.ts', './LangSelectorAPI.ts', './LanguageManager.ts', './MultiLanguage.ts', './NextMultiLanguage.ts', './TypesLanguageManager.ts', './ArticleCommand.ts', './AssetManager.ts', './AudioManager.ts', './ChatCommand.ts', './ClockChanger.ts', './CommandManager.ts', './EngineManager.ts', './EntryCommand.ts', './EventManager.ts', './ExpCommand.ts', './FacebookManager.ts', './GameDebugger.ts', './GameManager.ts', './GamePausedManager.ts', './GateCommand.ts', './GlobalConfig.ts', './GoogleManager.ts', './LeaderBoardCommand.ts', './MTTCommand.ts', './MissionCommand.ts', './NotifyCommand.ts', './QuickAudioPlayer.ts', './SNGCommand.ts', './SafeBoxCommand.ts', './ShopCommand.ts', './SpinGameCommand.ts', './SupportCommand.ts', './TableCommand.ts', './TableMonitorCommand.ts', './TimeTreasureCommand.ts', './UIController.ts', './UpdateManager.ts', './UserCommand.ts', './pAndroid.ts', './GaussianBlur.ts', './GameData.ts', './INetwork.ts', './IStorage.ts', './BaseStorage.ts', './CryptoStorage.ts', './DBStorage.ts', './LocalStorage.ts', './TestButton.ts', './TMttTournament.ts', './TSngTournament.ts', './PokerRank.ts', './UICardType.ts', './UIBase.ts', './AlertDialog.ts', './UIGameAlert.ts', './UIPopupAlert.ts', './EditTextResized.ts', './FloatingNotice.ts', './NoticePopup.ts', './NotifyToast.ts', './UIChatItem.ts', './UIKeepScale.ts', './UILoadingScene.ts', './UINotice.ts', './UIPopup.ts', './UIPopupNotice.ts', './UIScale.ts', './UIScaleBG.ts', './UISlider.ts', './UIUpdateAlignment.ts', './LinkListToggle.ts', './NodePoolToggler.ts', './TogglerManager.ts', './UIKickPlayer.ts', './UIActionCard.ts', './UIAutoPlayer.ts', './UIAutoPlaying.ts', './UICardInfo.ts', './UIGameAction.ts', './UIGameActionManager.ts', './UIGamePots.ts', './UIItemDealerIngame.ts', './UIItemDetailHistory.ts', './UIItemHistory.ts', './UILobbyCompete.ts', './UIMiniRateCard.ts', './UIPTPopupInfoTable.ts', './UIPopupActionDealer.ts', './UIPopupChangeAccessory.ts', './UIPopupChangeTable.ts', './UIPopupDetailHistory.ts', './UIPopupDonateChip.ts', './UIPopupGiveGift.ts', './UIPopupHistory.ts', './UIPopupInvitePlayer.ts', './UIPopupInvitePlayerItem.ts', './UIPopupMiniGame.ts', './UIPopupRateCard.ts', './UIPopupSpinGame.ts', './UIProfilePlayerIngame.ts', './UISpinHistory.ts', './UISpinHistoryItem.ts', './UISpinRule.ts', './UITipChipFly.ts', './EngineController.ts', './GameController.ts', './MTTController.ts', './MTTGamePlayer.ts', './PlayingController.ts', './SNGConfig.ts', './SNGGamePlayer.ts', './SNGWinner.ts', './YardGamePlayer.ts', './DataRoomMTT.ts', './InterfaceConfigMTT.ts', './ItemPlayerData.ts', './MTTPlayerData.ts', './SNGPlayerData.ts', './YardPlayerData.ts', './UIItemLevelsBlind.ts', './UIItemMineTournMTT.ts', './UIItemRanker.ts', './UIItemReward.ts', './UIItemRoomMTT.ts', './UIMTTRankManager.ts', './UIMTTRanking.ts', './UIMttResult.ts', './UIMttTableSelector.ts', './UIMttTablesView.ts', './UIPageItemRoomMTT.ts', './UIPanelMineTournMTT.ts', './UIPopupHelpMTT.ts', './UIPopupInfoTournMTT.ts', './UIPopupSigupMTT.ts', './UIRebuyPopup.ts', './UIRoomMTT.ts', './ChatClickHandle.ts', './ItemEmoji.ts', './UICardConfig.ts', './UICardHand.ts', './UICardManager.ts', './UICardsDealer.ts', './UIChatBox.ts', './UIChatRuntime.ts', './UIChipPlayerSNG.ts', './UICommunityCard.ts', './UIEmojiChat.ts', './UIEmojis.ts', './UIFlexTable.ts', './UIGameDealer.ts', './UIGameInfo.ts', './UIGameLight.ts', './UIGamePlay.ts', './UIHistoryChat.ts', './UIHistoryChatItem.ts', './UIHistoryChatManager.ts', './UIHistoryPlayer.ts', './UIItemCard.ts', './UIItemPlayer.ts', './UIItemPlayerManager.ts', './UIItemPlayerSNG.ts', './UIItemRoomSNG.ts', './UIPlayer.ts', './UIPlayerInfor.ts', './UIPlayerStatus.ts', './UIPlayingScene.ts', './UIPopupBuyChip.ts', './UIPopupChat.ts', './UIPopupHelpSNG.ts', './UIPopupMoreBet.ts', './UIPopupResultEndGame.ts', './UIPopupSettingInGame.ts', './UIQuickChat.ts', './UIRoomSNG.ts', './UIStandUpRegister.ts', './UIChestReward.ts', './UIItemCardFace.ts', './UIPanelChangeCardBack.ts', './UIPanelChangeCardFace.ts', './UIPanelChangeDealer.ts', './UIPanelChangeTitle.ts', './UIPanelHistory.ts', './UIPopupCardFace.ts', './RoomItemData.ts', './UIPTPageRoom.ts', './UIPTRoomItem.ts', './UIPTYard.ts', './UIPTPopupAlertVip.ts', './UIPTPopupCreatePrivateRoom.ts', './UIPTPopupCreateSuccesAlert.ts', './UIPTPopupFilterRoomType.ts', './UIPTPopupHelp.ts', './UIPTPopupJoinPrivateRoom.ts', './UIPTPopupSearchRoom.ts', './UIEmailRegister.ts', './UILogin.ts', './UILoginApple.ts', './UILoginAsGuest.ts', './UILoginChangePhoneZone.ts', './UILoginEmail.ts', './UILoginFB.ts', './UILoginForgotPassword.ts', './UILoginGoogle.ts', './UIReconnect.ts', './AvatarItem.ts', './PhoneZoneItem.ts', './MainScreenController.ts', './UIFloatingMessage.ts', './UIInvitedToPlay.ts', './UIMainScreen.ts', './UIBanner.ts', './UIEmail.ts', './UIItemEmail.ts', './UIItemNotifi.ts', './UIEvent.ts', './UIItemEventPage.ts', './FriendManager.ts', './UIFriend.ts', './UIFriendChat.ts', './UIFriendItem.ts', './UIFriendProfile.ts', './UIGiveAwayItem.ts', './UIPopupGiveAway.ts', './UIEmailIconCounter.ts', './UINoticeIconCounter.ts', './UIMission.ts', './UIMissionItem.ts', './UIMore.ts', './UIAchievement.ts', './UIBtnLoadAvatar.ts', './UIChooseAvatarItem.ts', './UIItemAchievement.ts', './UIMiniProfile.ts', './UINoticeAchievement.ts', './UIProfile.ts', './UIProfileAchievement.ts', './UIProfileEdit.ts', './UIProfileSafe.ts', './UIResetPassword.ts', './UISafeboxPassword.ts', './UIRank.ts', './UIRankItem.ts', './UIRankPlayerInfo.ts', './UISetting.ts', './UISettingLanguage.ts', './UISettingLogOut.ts', './UISettingOther.ts', './UISettingPrivacy.ts', './UISettingRemoveAcc.ts', './UISettingRemoveCache.ts', './UIHistoryFeedbackItem.ts', './UISupport.ts', './UISupportItem.ts', './UISupportLevelRuleItem.ts', './UISupportTableLevelRule.ts', './CardTutorial.ts', './EndTurorial.ts', './GameTutorial.ts', './InGameTutorial.ts', './MainPropertyTut.ts', './MoverTutorial.ts', './NextTutoritalStep.ts', './StepButton.ts', './TipDealerTutorial.ts', './TutorialStep.ts', './TutorialTween.ts', './UIGamePlayTutorial.ts', './UIGameTutorial.ts', './UIRewardEndTutorial.ts', './UITutorial.ts', './UITutorialScene.ts', './ShopManager.ts', './UICardsPage.ts', './UIDefaultShopPage.ts', './UIGiftToFriends.ts', './UINavDefaultShopPage.ts', './UIPopupBuy.ts', './UIPurchasedShopPage.ts', './UIShop.ts', './UIShopPage.ts', './MyPropsItem.ts', './UICardItem.ts', './UIGiftFriendItem.ts', './UIItemPurchased.ts', './UINormalItem.ts', './UISpecialItem.ts', './UISplash.ts', './Dropdown.ts', './DropdownItem.ts', './ArrayUtils.ts', './AsyncUtils.ts', './BundleUtils.ts', './ClassUtils.ts', './ComponentUtils.ts', './CryptoUtils.ts', './DateUtils.ts', './Decorators.ts', './EnumUtils.ts', './FileUtils.ts', './GlobalUtils.ts', './HttpUtils.ts', './JsonUtils.ts', './MathUtils.ts', './NodeUtils.ts', './ObjectUtils.ts', './Pooler.ts', './RoundedRectMask.ts', './RoundedRectShaderController.ts', './StringUtils.ts', './TimeZone.ts', './ToggleUtil.ts'], function () {
   return {
     setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
     execute: function () {}
@@ -18509,7 +18509,7 @@ System.register("chunks:///_virtual/msg_decoder.ts", ['cc', './codec.ts', './uti
   };
 });
 
-System.register("chunks:///_virtual/msg_encoder.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './codec.ts', './util.ts', './constants2.ts'], function (exports) {
+System.register("chunks:///_virtual/msg_encoder.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './codec.ts', './util.ts', './constants.ts'], function (exports) {
   var _createForOfIteratorHelperLoose, cclegacy, Codec, Util, constants;
   return {
     setters: [function (module) {
@@ -22359,7 +22359,7 @@ System.register("chunks:///_virtual/PokerRank.ts", ['cc'], function (exports) {
   };
 });
 
-System.register("chunks:///_virtual/Pooler.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventDriver.ts', './Constants.ts', './EngineManager.ts', './ArrayUtils.ts'], function (exports) {
+System.register("chunks:///_virtual/Pooler.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventDriver.ts', './Constants2.ts', './EngineManager.ts', './ArrayUtils.ts'], function (exports) {
   var _createForOfIteratorHelperLoose, _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, NSEventDriver, VOID_FUNC, pEngineManager, pArray;
   return {
     setters: [function (module) {
@@ -23583,7 +23583,7 @@ System.register("chunks:///_virtual/ResponeCode.ts", ['cc'], function (exports) 
   };
 });
 
-System.register("chunks:///_virtual/RoomItemData.ts", ['cc', './Constants.ts', './Enums.ts'], function (exports) {
+System.register("chunks:///_virtual/RoomItemData.ts", ['cc', './Constants2.ts', './Enums.ts'], function (exports) {
   var cclegacy, GameZoneOptions, GameModeOptions, ENumberPlayerCount;
   return {
     setters: [function (module) {
@@ -24309,7 +24309,7 @@ System.register("chunks:///_virtual/RoundedRectShaderController.ts", ['./rollupP
   };
 });
 
-System.register("chunks:///_virtual/RunningNumber.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AnimationFX.ts', './IAnimationFX.ts', './Enums.ts', './StringUtils.ts', './Constants.ts'], function (exports) {
+System.register("chunks:///_virtual/RunningNumber.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AnimationFX.ts', './IAnimationFX.ts', './Enums.ts', './StringUtils.ts', './Constants2.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Label, Enum, tween, AnimationFX, NSAnimationFX, ETweenEasing, EComponentInvokeOptions, pStringUtils, CCGroupPropertyID;
   return {
     setters: [function (module) {
@@ -25367,7 +25367,7 @@ System.register("chunks:///_virtual/SNGCommand.ts", ['./rollupPluginModLoBabelHe
   };
 });
 
-System.register("chunks:///_virtual/SNGConfig.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Decorators.ts', './SNGHelper.ts', './GlobalConfig.ts', './TSngTournament.ts', './Constants.ts', './ClassHelper.ts', './SNGCommand.ts', './EngineManager.ts'], function (exports) {
+System.register("chunks:///_virtual/SNGConfig.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Decorators.ts', './SNGHelper.ts', './GlobalConfig.ts', './TSngTournament.ts', './Constants2.ts', './ClassHelper.ts', './SNGCommand.ts', './EngineManager.ts'], function (exports) {
   var _inheritsLoose, _createClass, _applyDecoratedDescriptor, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, pDecorators, SNGSpace, GlobalConfig, TSngTournament, CCGroup, HelperSpace, request, pEngineManager;
   return {
     setters: [function (module) {
@@ -31143,7 +31143,7 @@ System.register("chunks:///_virtual/UIAchievement.ts", ['./rollupPluginModLoBabe
   };
 });
 
-System.register("chunks:///_virtual/UIActionCard.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIBase.ts', './LanguageManager.ts', './StringUtils.ts', './Constants.ts', './EventManager.ts'], function (exports) {
+System.register("chunks:///_virtual/UIActionCard.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIBase.ts', './LanguageManager.ts', './StringUtils.ts', './Constants2.ts', './EventManager.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createClass, cclegacy, _decorator, Button, Label, Node, Material, Sprite, UIBase, LanguageMananger, pStringUtils, btnStates, pEventManager;
   return {
     setters: [function (module) {
@@ -37884,7 +37884,7 @@ System.register("chunks:///_virtual/UIEvent.ts", ['./rollupPluginModLoBabelHelpe
   };
 });
 
-System.register("chunks:///_virtual/UIFlexTable.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Constants.ts'], function (exports) {
+System.register("chunks:///_virtual/UIFlexTable.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Constants2.ts'], function (exports) {
   var _applyDecoratedDescriptor, _createClass, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Node, Component, CCEGameZoneOptions, toGameZoneOption, GameZoneOptions;
   return {
     setters: [function (module) {
@@ -39994,7 +39994,7 @@ System.register("chunks:///_virtual/UIFriendProfile.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("chunks:///_virtual/UIGameAction.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventDriver.ts', './EventManager.ts', './ComponentUtils.ts', './LanguageManager.ts', './StringUtils.ts', './Constants.ts', './Decorators.ts', './AudioManager.ts', './Enums.ts'], function (exports) {
+System.register("chunks:///_virtual/UIGameAction.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventDriver.ts', './EventManager.ts', './ComponentUtils.ts', './LanguageManager.ts', './StringUtils.ts', './Constants2.ts', './Decorators.ts', './AudioManager.ts', './Enums.ts'], function (exports) {
   var _inheritsLoose, _createClass, _applyDecoratedDescriptor, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Node, Button, Label, NSEventDriver, pEventManager, pComponentUtils, LanguageMananger, pStringUtils, btnStates, pDecorators, NSAudio, EAudioID;
   return {
     setters: [function (module) {
@@ -41150,7 +41150,7 @@ System.register("chunks:///_virtual/UIGameLight.ts", ['./rollupPluginModLoBabelH
   };
 });
 
-System.register("chunks:///_virtual/UIGamePlay.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIItemPlayer.ts', './Enums.ts', './PlayingController.ts', './UICardType.ts', './EventManager.ts', './EventDriver.ts', './Decorators.ts', './UICommunityCard.ts', './UIItemPlayerManager.ts', './UIGameDealer.ts', './UIGameAlert.ts', './Constants.ts', './UIPopupRateCard.ts', './GlobalConfig.ts', './SkeletonSelector.ts', './AudioManager.ts', './StringUtils.ts', './UIController.ts', './ArrayUtils.ts'], function (exports) {
+System.register("chunks:///_virtual/UIGamePlay.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIItemPlayer.ts', './Enums.ts', './PlayingController.ts', './UICardType.ts', './EventManager.ts', './EventDriver.ts', './Decorators.ts', './UICommunityCard.ts', './UIItemPlayerManager.ts', './UIGameDealer.ts', './UIGameAlert.ts', './Constants2.ts', './UIPopupRateCard.ts', './GlobalConfig.ts', './SkeletonSelector.ts', './AudioManager.ts', './StringUtils.ts', './UIController.ts', './ArrayUtils.ts'], function (exports) {
   var _inheritsLoose, _createForOfIteratorHelperLoose, _createClass, _applyDecoratedDescriptor, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, Label, UIItemPlayer, EStatusPlayer, EAudioID, ETypeModePlay, ENumberPlayerCount, PlayingController, NSCardType, pEventManager, NSEventDriver, pDecorators, UICommunityCard, NSItemPlayerManager, UIGameDealer, NSGameAlert, Duration, NSCardRate, GlobalConfig, NSSkeletonSelector, NSAudio, pStringUtils, UIController, pArray;
   return {
     setters: [function (module) {
@@ -42000,7 +42000,7 @@ System.register("chunks:///_virtual/UIGamePlay.ts", ['./rollupPluginModLoBabelHe
   };
 });
 
-System.register("chunks:///_virtual/UIGamePlayTutorial.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Constants.ts', './GlobalConfig.ts', './SkeletonSelector.ts', './AudioManager.ts', './EventDriver.ts', './Enums.ts', './Decorators.ts', './StringUtils.ts', './UIGameAlert.ts', './UICommunityCard.ts', './UIGameDealer.ts', './UIItemPlayer.ts', './UIItemPlayerManager.ts', './LanguageManager.ts', './UITutorialScene.ts', './AsyncUtils.ts', './UICardsDealer.ts', './GameManager.ts'], function (exports) {
+System.register("chunks:///_virtual/UIGamePlayTutorial.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Constants2.ts', './GlobalConfig.ts', './SkeletonSelector.ts', './AudioManager.ts', './EventDriver.ts', './Enums.ts', './Decorators.ts', './StringUtils.ts', './UIGameAlert.ts', './UICommunityCard.ts', './UIGameDealer.ts', './UIItemPlayer.ts', './UIItemPlayerManager.ts', './LanguageManager.ts', './UITutorialScene.ts', './AsyncUtils.ts', './UICardsDealer.ts', './GameManager.ts'], function (exports) {
   var _inheritsLoose, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, _createClass, _applyDecoratedDescriptor, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Node, Label, Button, Slider, RichText, v2, js, Duration, GlobalConfig, NSSkeletonSelector, NSAudio, NSEventDriver, EAudioID, ENumberPlayerCount, ETypeModePlay, EDealSpeed, pDecorators, pStringUtils, NSGameAlert, UICommunityCard, UIGameDealer, UIItemPlayer, NSItemPlayerManager, LanguageMananger, UITutorialScene, pAsyncUtils, NSCardsDealer, GameManager;
   return {
     setters: [function (module) {
@@ -43175,7 +43175,7 @@ System.register("chunks:///_virtual/UIGamePlayTutorial.ts", ['./rollupPluginModL
   };
 });
 
-System.register("chunks:///_virtual/UIGamePots.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StringUtils.ts', './MathUtils.ts', './NodeUtils.ts', './AsyncUtils.ts', './EventManager.ts', './Decorators.ts', './Constants.ts', './Pooler.ts', './EngineManager.ts', './ArrayUtils.ts', './Actioner.ts', './Enums.ts', './AudioManager.ts'], function (exports) {
+System.register("chunks:///_virtual/UIGamePots.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StringUtils.ts', './MathUtils.ts', './NodeUtils.ts', './AsyncUtils.ts', './EventManager.ts', './Decorators.ts', './Constants2.ts', './Pooler.ts', './EngineManager.ts', './ArrayUtils.ts', './Actioner.ts', './Enums.ts', './AudioManager.ts'], function (exports) {
   var _applyDecoratedDescriptor, _createClass, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, cclegacy, Node, Label, SpriteFrame, Layers, _decorator, isValid, Sprite, UIOpacity, v3, Component, pStringUtils, pMathUtils, pNodeUtils, pAsyncUtils, pEventManager, pDecorators, Config, Pooler, pEngineManager, pArray, Actioner, EAudioID, NSAudio;
   return {
     setters: [function (module) {
@@ -48457,7 +48457,7 @@ System.register("chunks:///_virtual/UIItemReward.ts", ['./rollupPluginModLoBabel
   };
 });
 
-System.register("chunks:///_virtual/UIItemRoomMTT.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Enums.ts', './MTTController.ts', './TMttTournament.ts', './Decorators.ts', './MTTHelper.ts', './ArrayUtils.ts', './LanguageManager.ts', './StringUtils.ts', './UIController.ts', './UINotice.ts', './GlobalConfig.ts', './ResponeCode.ts', './NotifyToast.ts', './PlayingController.ts', './MTTCommand.ts', './AsyncUtils.ts', './DBStorage.ts', './EventManager.ts', './Constants.ts', './EventDriver.ts', './ComponentUtils.ts'], function (exports) {
+System.register("chunks:///_virtual/UIItemRoomMTT.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Enums.ts', './MTTController.ts', './TMttTournament.ts', './Decorators.ts', './MTTHelper.ts', './ArrayUtils.ts', './LanguageManager.ts', './StringUtils.ts', './UIController.ts', './UINotice.ts', './GlobalConfig.ts', './ResponeCode.ts', './NotifyToast.ts', './PlayingController.ts', './MTTCommand.ts', './AsyncUtils.ts', './DBStorage.ts', './EventManager.ts', './Constants2.ts', './EventDriver.ts', './ComponentUtils.ts'], function (exports) {
   var _inheritsLoose, _asyncToGenerator, _regeneratorRuntime, _applyDecoratedDescriptor, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Sprite, Button, Label, Node, UIType, ENumberPlayerCount, ETypeModePlay, EDealSpeed, NSMttConfig, TMttTournament, pDecorators, MTTSpace, pArray, LanguageMananger, pStringUtils, UIController, UINotice, GlobalConfig, ResponseCode, NotifyToast, PlayingController, request, pAsyncUtils, DBStorage, pEventManager, Duration, NSEventDriver, pComponentUtils;
   return {
     setters: [function (module) {
@@ -49192,7 +49192,7 @@ System.register("chunks:///_virtual/UIItemRoomMTT.ts", ['./rollupPluginModLoBabe
   };
 });
 
-System.register("chunks:///_virtual/UIItemRoomSNG.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIBase.ts', './Decorators.ts', './SNGConfig.ts', './StringUtils.ts', './GlobalConfig.ts', './UINotice.ts', './ResponeCode.ts', './PlayingController.ts', './Enums.ts', './UIController.ts', './Constants.ts', './DBStorage.ts', './SNGCommand.ts'], function (exports) {
+System.register("chunks:///_virtual/UIItemRoomSNG.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIBase.ts', './Decorators.ts', './SNGConfig.ts', './StringUtils.ts', './GlobalConfig.ts', './UINotice.ts', './ResponeCode.ts', './PlayingController.ts', './Enums.ts', './UIController.ts', './Constants2.ts', './DBStorage.ts', './SNGCommand.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, _createClass, cclegacy, _decorator, Label, Sprite, Button, UIBase, pDecorators, NSngConfig, pStringUtils, GlobalConfig, UINotice, ResponseCode, PlayingController, ETypeModePlay, EDealSpeed, UIType, ENumberPlayerCount, UIController, numberToGameZone, DBStorage, request;
   return {
     setters: [function (module) {
@@ -50607,7 +50607,7 @@ System.register("chunks:///_virtual/UILoginApple.ts", ['./rollupPluginModLoBabel
   };
 });
 
-System.register("chunks:///_virtual/UILoginAsGuest.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIBase.ts', './AvatarItem.ts', './Enums.ts', './GameManager.ts', './StringUtils.ts', './GlobalConfig.ts', './ResponeCode.ts', './UINotice.ts', './AsyncUtils.ts', './MiniLoading.ts', './CaptchaHelper.ts', './Constants.ts', './JsonUtils.ts', './EntryCommand.ts'], function (exports) {
+System.register("chunks:///_virtual/UILoginAsGuest.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIBase.ts', './AvatarItem.ts', './Enums.ts', './GameManager.ts', './StringUtils.ts', './GlobalConfig.ts', './ResponeCode.ts', './UINotice.ts', './AsyncUtils.ts', './MiniLoading.ts', './CaptchaHelper.ts', './Constants2.ts', './JsonUtils.ts', './EntryCommand.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Prefab, Label, Button, UIBase, AvatarItem, EGameState, GameManager, pStringUtils, GlobalConfig, ResponseCode, UINotice, pAsyncUtils, MiniLoading, NSCaptcha, StorageKeys, JsonUtils, request;
   return {
     setters: [function (module) {
@@ -52841,7 +52841,7 @@ System.register("chunks:///_virtual/UIMiniProfile.ts", ['./rollupPluginModLoBabe
   };
 });
 
-System.register("chunks:///_virtual/UIMiniRateCard.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Decorators.ts', './UIPopupRateCard.ts', './Enums.ts', './LanguageManager.ts', './EventManager.ts', './Constants.ts'], function (exports) {
+System.register("chunks:///_virtual/UIMiniRateCard.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Decorators.ts', './UIPopupRateCard.ts', './Enums.ts', './LanguageManager.ts', './EventManager.ts', './Constants2.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, UIOpacity, Label, tween, Component, pDecorators, NSCardRate, ECardRank, LanguageMananger, pEventManager, CardRank;
   return {
     setters: [function (module) {
@@ -56180,7 +56180,7 @@ System.register("chunks:///_virtual/UIPanelMineTournMTT.ts", ['./rollupPluginMod
   };
 });
 
-System.register("chunks:///_virtual/UIPlayer.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIGameInfo.ts', './UIPlayerInfor.ts', './NodeUtils.ts', './AsyncUtils.ts', './LinkListToggle.ts', './Constants.ts', './ComponentUtils.ts', './Enums.ts', './Decorators.ts', './GlobalConfig.ts'], function (exports) {
+System.register("chunks:///_virtual/UIPlayer.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIGameInfo.ts', './UIPlayerInfor.ts', './NodeUtils.ts', './AsyncUtils.ts', './LinkListToggle.ts', './Constants2.ts', './ComponentUtils.ts', './Enums.ts', './Decorators.ts', './GlobalConfig.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createClass, cclegacy, _decorator, v3, CCInteger, tween, Component, UIGameInfo, UIPlayerInfor, pNodeUtils, pAsyncUtils, NSLinkListToggle, CCGroup, pComponentUtils, ENumberPlayerCount, EStatusPlayer, pDecorators, GlobalConfig;
   return {
     setters: [function (module) {
@@ -56455,7 +56455,7 @@ System.register("chunks:///_virtual/UIPlayer.ts", ['./rollupPluginModLoBabelHelp
   };
 });
 
-System.register("chunks:///_virtual/UIPlayerBalanceUpdater.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GlobalConfig.ts', './StringUtils.ts', './Enums.ts', './RunningNumber.ts', './Constants.ts', './EventManager.ts'], function (exports) {
+System.register("chunks:///_virtual/UIPlayerBalanceUpdater.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GlobalConfig.ts', './StringUtils.ts', './Enums.ts', './RunningNumber.ts', './Constants2.ts', './EventManager.ts'], function (exports) {
   var _inheritsLoose, _createClass, _applyDecoratedDescriptor, _assertThisInitialized, _initializerDefineProperty, cclegacy, _decorator, CCInteger, Enum, GlobalConfig, pStringUtils, EPlayerBalance, NSRunningNumberFX, CCGroupPropertyID, pEventManager;
   return {
     setters: [function (module) {
@@ -56814,7 +56814,7 @@ System.register("chunks:///_virtual/UIPlayerInfor.ts", ['./rollupPluginModLoBabe
   };
 });
 
-System.register("chunks:///_virtual/UIPlayerStatus.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Constants.ts', './LanguageManager.ts', './NodeUtils.ts', './ComponentUtils.ts'], function (exports) {
+System.register("chunks:///_virtual/UIPlayerStatus.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Constants2.ts', './LanguageManager.ts', './NodeUtils.ts', './ComponentUtils.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createClass, cclegacy, _decorator, Label, Node, sp, Color, v3, UIOpacity, tween, instantiate, Component, CCGroup, Duration, LanguageMananger, pNodeUtils, pComponentUtils;
   return {
     setters: [function (module) {
@@ -66404,7 +66404,7 @@ System.register("chunks:///_virtual/UIPTPopupAlertVip.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("chunks:///_virtual/UIPTPopupCreatePrivateRoom.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIBase.ts', './Dropdown.ts', './Enums.ts', './Constants.ts', './ResponeCode.ts', './StringUtils.ts', './UINotice.ts', './GlobalConfig.ts', './LanguageManager.ts', './Decorators.ts', './DBStorage.ts', './GameManager.ts', './ComponentUtils.ts', './TableCommand.ts'], function (exports) {
+System.register("chunks:///_virtual/UIPTPopupCreatePrivateRoom.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIBase.ts', './Dropdown.ts', './Enums.ts', './Constants2.ts', './ResponeCode.ts', './StringUtils.ts', './UINotice.ts', './GlobalConfig.ts', './LanguageManager.ts', './Decorators.ts', './DBStorage.ts', './GameManager.ts', './ComponentUtils.ts', './TableCommand.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, EditBox, ToggleContainer, Button, Node, UIBase, Dropdown, ENumberPlayerCount, ListRoomData, GameZoneOptions, ResponseCode, pStringUtils, UINotice, GlobalConfig, LanguageMananger, pDecorators, DBStorage, GameManager, pComponentUtils, request;
   return {
     setters: [function (module) {
@@ -67377,7 +67377,7 @@ System.register("chunks:///_virtual/UIPTPopupSearchRoom.ts", ['./rollupPluginMod
   };
 });
 
-System.register("chunks:///_virtual/UIPTRoomItem.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIBase.ts', './StringUtils.ts', './UIController.ts', './Enums.ts', './ResponeCode.ts', './EventManager.ts', './GlobalConfig.ts', './Constants.ts', './Decorators.ts', './DBStorage.ts', './JsonUtils.ts', './GameManager.ts', './TableCommand.ts', './UINotice.ts'], function (exports) {
+System.register("chunks:///_virtual/UIPTRoomItem.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIBase.ts', './StringUtils.ts', './UIController.ts', './Enums.ts', './ResponeCode.ts', './EventManager.ts', './GlobalConfig.ts', './Constants2.ts', './Decorators.ts', './DBStorage.ts', './JsonUtils.ts', './GameManager.ts', './TableCommand.ts', './UINotice.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Sprite, Label, Button, Node, SpriteFrame, UIBase, pStringUtils, UIController, UIType, ResponseCode, pEventManager, GlobalConfig, gameZoneToNumber, pDecorators, DBStorage, JsonUtils, GameManager, request, UINotice;
   return {
     setters: [function (module) {
@@ -67802,7 +67802,7 @@ System.register("chunks:///_virtual/UIPTRoomItem.ts", ['./rollupPluginModLoBabel
   };
 });
 
-System.register("chunks:///_virtual/UIPTYard.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIBase.ts', './Enums.ts', './UIPTPageRoom.ts', './UIController.ts', './RoomItemData.ts', './EventManager.ts', './ComponentUtils.ts', './GlobalConfig.ts', './AsyncUtils.ts', './StringUtils.ts', './DynamicButton.ts', './Constants.ts', './MainScreenController.ts', './TableMonitorCommand.ts'], function (exports) {
+System.register("chunks:///_virtual/UIPTYard.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIBase.ts', './Enums.ts', './UIPTPageRoom.ts', './UIController.ts', './RoomItemData.ts', './EventManager.ts', './ComponentUtils.ts', './GlobalConfig.ts', './AsyncUtils.ts', './StringUtils.ts', './DynamicButton.ts', './Constants2.ts', './MainScreenController.ts', './TableMonitorCommand.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, EventTarget, Node, Button, ToggleContainer, Label, PageView, Prefab, UIOpacity, Tween, color, tween, instantiate, UIBase, UIType, UIPTPageRoom, UIController, RoomItemData, pEventManager, pComponentUtils, GlobalConfig, pAsyncUtils, pStringUtils, NSDynamicButton, numberToGameZone, MainScreenController, request;
   return {
     setters: [function (module) {
@@ -71840,7 +71840,7 @@ System.register("chunks:///_virtual/UIScale.ts", ['./rollupPluginModLoBabelHelpe
   };
 });
 
-System.register("chunks:///_virtual/UIScaleBG.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Constants.ts', './ComponentUtils.ts', './MathUtils.ts'], function (exports) {
+System.register("chunks:///_virtual/UIScaleBG.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Constants2.ts', './ComponentUtils.ts', './MathUtils.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Node, UITransform, screen, Component, DESIGN_RESOLUTION_WIDTH, DESIGN_RESOLUTION_HEIGHT, pComponentUtils, pMathUtils;
   return {
     setters: [function (module) {
@@ -73514,7 +73514,7 @@ System.register("chunks:///_virtual/UISpinHistory.ts", ['./rollupPluginModLoBabe
   };
 });
 
-System.register("chunks:///_virtual/UISpinHistoryItem.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './LinkListToggle.ts', './StringUtils.ts', './Constants.ts', './Enums.ts', './LanguageManager.ts', './UICardConfig.ts'], function (exports) {
+System.register("chunks:///_virtual/UISpinHistoryItem.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './LinkListToggle.ts', './StringUtils.ts', './Constants2.ts', './Enums.ts', './LanguageManager.ts', './UICardConfig.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Label, Sprite, Node, Component, NSLinkListToggle, pStringUtils, CardRank, getEnumFromKeys, ECardRank, LanguageMananger, UICardConfig;
   return {
     setters: [function (module) {
@@ -74278,7 +74278,6 @@ System.register("chunks:///_virtual/UISupport.ts", ['./rollupPluginModLoBabelHel
           _initializerDefineProperty(_this, "levelNode", _descriptor9, _assertThisInitialized(_this));
           _initializerDefineProperty(_this, "feedbackNode", _descriptor10, _assertThisInitialized(_this));
           _initializerDefineProperty(_this, "supportItemPrefab", _descriptor11, _assertThisInitialized(_this));
-          // group: issue node
           _initializerDefineProperty(_this, "scrViewIssueItems", _descriptor12, _assertThisInitialized(_this));
           _initializerDefineProperty(_this, "issueFilterTC", _descriptor13, _assertThisInitialized(_this));
           // group: issue node
@@ -74848,8 +74847,8 @@ System.register("chunks:///_virtual/UISupport.ts", ['./rollupPluginModLoBabelHel
   };
 });
 
-System.register("chunks:///_virtual/UISupportItem.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UIBase.ts', './LanguageManager.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Sprite, Label, Button, size, UITransform, tween, UIBase, LanguageMananger;
+System.register("chunks:///_virtual/UISupportItem.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './LanguageManager.ts', './ComponentUtils.ts'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Sprite, Label, Button, UITransform, UIOpacity, size, tween, Component, LanguageMananger, pComponentUtils;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -74862,177 +74861,154 @@ System.register("chunks:///_virtual/UISupportItem.ts", ['./rollupPluginModLoBabe
       Sprite = module.Sprite;
       Label = module.Label;
       Button = module.Button;
-      size = module.size;
       UITransform = module.UITransform;
+      UIOpacity = module.UIOpacity;
+      size = module.size;
       tween = module.tween;
-    }, function (module) {
-      UIBase = module.UIBase;
+      Component = module.Component;
     }, function (module) {
       LanguageMananger = module.LanguageMananger;
+    }, function (module) {
+      pComponentUtils = module.pComponentUtils;
     }],
     execute: function () {
-      var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8;
+      var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9;
       cclegacy._RF.push({}, "6c061V3OXJORrkNzx7MEoxG", "UISupportItem", undefined);
       var ccclass = _decorator.ccclass,
         property = _decorator.property,
         type = _decorator.type;
-      var UISupportItem = exports('UISupportItem', (_dec = ccclass('UISupportItem'), _dec2 = type(Sprite), _dec3 = type(Label), _dec4 = type(Label), _dec5 = type(Button), _dec6 = type(Button), _dec(_class = (_class2 = /*#__PURE__*/function (_UIBase) {
-        _inheritsLoose(UISupportItem, _UIBase);
+      var UISupportItem = exports('UISupportItem', (_dec = ccclass('UISupportItem'), _dec2 = type(Sprite), _dec3 = type(Label), _dec4 = type(Label), _dec5 = type(Button), _dec6 = type(Button), _dec7 = type(UITransform), _dec8 = type(UIOpacity), _dec9 = property({}), _dec10 = property({}), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+        _inheritsLoose(UISupportItem, _Component);
         function UISupportItem() {
           var _this;
           for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
             args[_key] = arguments[_key];
           }
-          _this = _UIBase.call.apply(_UIBase, [this].concat(args)) || this;
-          _initializerDefineProperty(_this, "data", _descriptor, _assertThisInitialized(_this));
-          _initializerDefineProperty(_this, "bg", _descriptor2, _assertThisInitialized(_this));
-          _initializerDefineProperty(_this, "lblQuestion", _descriptor3, _assertThisInitialized(_this));
-          _initializerDefineProperty(_this, "lblAnswer", _descriptor4, _assertThisInitialized(_this));
-          _initializerDefineProperty(_this, "btnExpand", _descriptor5, _assertThisInitialized(_this));
-          _initializerDefineProperty(_this, "btnCollapse", _descriptor6, _assertThisInitialized(_this));
-          _initializerDefineProperty(_this, "expandTime", _descriptor7, _assertThisInitialized(_this));
-          _initializerDefineProperty(_this, "_contentSize", _descriptor8, _assertThisInitialized(_this));
+          _this = _Component.call.apply(_Component, [this].concat(args)) || this;
+          _initializerDefineProperty(_this, "bg", _descriptor, _assertThisInitialized(_this));
+          _initializerDefineProperty(_this, "lblQuestion", _descriptor2, _assertThisInitialized(_this));
+          _initializerDefineProperty(_this, "lblAnswer", _descriptor3, _assertThisInitialized(_this));
+          _initializerDefineProperty(_this, "btnExpand", _descriptor4, _assertThisInitialized(_this));
+          _initializerDefineProperty(_this, "btnCollapse", _descriptor5, _assertThisInitialized(_this));
+          _initializerDefineProperty(_this, "dif", _descriptor6, _assertThisInitialized(_this));
+          _initializerDefineProperty(_this, "opx", _descriptor7, _assertThisInitialized(_this));
+          _initializerDefineProperty(_this, "difh", _descriptor8, _assertThisInitialized(_this));
+          _initializerDefineProperty(_this, "expandTime", _descriptor9, _assertThisInitialized(_this));
+          _this._size = size();
+          _this._data = null;
+          _this._tween = null;
+          _this._trans = null;
           return _this;
         }
         var _proto = UISupportItem.prototype;
-        _proto._onStart = function _onStart() {
-          this._addClicker(this.btnExpand, this.expand, this);
-          this._addClicker(this.btnCollapse, this.collapse, this);
-          this._contentSize = size(this.getComponent(UITransform).contentSize.width, this.getComponent(UITransform).contentSize.height);
-          this.expandTime = 0.1;
+        _proto.onLoad = function onLoad() {
+          pComponentUtils.appends({
+            _options: [{
+              _handlers: this._expand,
+              _target: this.btnExpand
+            }, {
+              _handlers: this._collapse,
+              _target: this.btnCollapse
+            }],
+            _type: Button.EventType.CLICK,
+            _binder: this
+          });
+          this._trans = pComponentUtils.getSafeComponent(this, UITransform);
+          this._size = this._trans.contentSize.clone();
         };
         _proto.init = function init(data) {
-          this.data = data;
+          this._data = data;
           this.lblQuestion.string = LanguageMananger.instance.getString(data.question);
           this.lblAnswer.string = LanguageMananger.instance.getString(data.answer);
-          this.lblAnswer.node.active = false;
+          this.opx.opacity = 0;
         };
-        _proto.expand = function expand() {
-          var _this2 = this;
-          tween().target(this.getComponent(UITransform)).call(function () {
-            _this2.btnExpand.node.active = false;
-            _this2.btnCollapse.node.active = true;
-            // if (this.bg) {
-            //     this.bg.markForUpdateRenderData();
-            // }
-          })
-          // .parallel(
-          //     tween(this.getComponent(UITransform))
-          //         .to(this.expandTime, {_contentSize: size(this._contentSize.width, this._contentSize.height + 50)}),
-          //     tween(this.bg.getComponent(UITransform))
-          //         .to(this.expandTime, {_contentSize: size(this._contentSize.width, this._contentSize.height + 50)}),
-          // )
-          .to(this.expandTime, {
-            contentSize: size(this._contentSize.width, this._contentSize.height + 50)
-          })
-          // .call(() => {
-          //     this.node.parent.getComponent(Layout).updateLayout(true);
-          //     const bg: Sprite = this.node.getComponent(Sprite);
-          //     if (bg) {
-          //         bg.markForUpdateRenderData();
-          //     }
-          //     for (let i = 0; i < this.node.children.length; i++) {
-          //         const w = this.node.children[i].getComponent(Widget);
-          //         if (w != null) {
-          //             w.updateAlignment();
-          //         }
-          //     }
-          // })
-          .call(function () {
-            _this2.lblAnswer.node.active = true;
+        _proto._expand = function _expand() {
+          var _this$_tween,
+            _this2 = this;
+          this.btnExpand.node.active = false;
+          this.btnCollapse.node.active = true;
+          (_this$_tween = this._tween) == null || _this$_tween.stop();
+          this._tween = tween().target(this._trans).to(this.expandTime, {
+            contentSize: size(this._size.width, this._size.height + this.dif.height + this.difh)
+          }).call(function () {
+            return _this2.opx.opacity = 255;
           }).start();
         };
-        _proto.collapse = function collapse() {
-          var _this3 = this;
-          tween().target(this.getComponent(UITransform)).call(function () {
-            _this3.lblAnswer.node.active = false;
-            // if (this.bg) {
-            //     this.bg.markForUpdateRenderData();
-            // }
-          })
-          // .parallel(
-          //     tween(this.getComponent(UITransform))
-          //         .to(this.expandTime, {contentSize: size(this._contentSize.width, this._contentSize.height)}),
-          //     tween(this.bg.getComponent(UITransform))
-          //         .to(this.expandTime, {contentSize: size(this._contentSize.width, this._contentSize.height)}),
-          // )
-          .to(this.expandTime, {
-            contentSize: size(this._contentSize.width, this._contentSize.height)
+        _proto._collapse = function _collapse() {
+          var _this$_tween2,
+            _this3 = this;
+          this.opx.opacity = 0;
+          (_this$_tween2 = this._tween) == null || _this$_tween2.stop();
+          this._tween = tween().target(this._trans).to(this.expandTime, {
+            contentSize: size(this._size.width, this._size.height)
           }).call(function () {
             _this3.btnExpand.node.active = true;
             _this3.btnCollapse.node.active = false;
-          })
-          // .parallel(
-          //     tween(this.getComponent(UITransform))
-          //         .to(this.expandTime, {contentSize: size(this._contentSize.width, this._contentSize.height)}),
-          //     tween(this.node)
-          //         .call(() => {
-          //             for (let i = 0; i < this.node.children.length; i++) {
-          //                 const w = this.node.children[i].getComponent(Widget);
-          //                 if (w != null) {
-          //                     w.updateAlignment();
-          //                 }
-          //             }
-          //         })
-          // )
-          .start();
+          }).start();
         };
         return UISupportItem;
-      }(UIBase), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "data", [property], {
+      }(Component), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "bg", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "bg", [_dec2], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "lblQuestion", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "lblQuestion", [_dec3], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "lblAnswer", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "lblAnswer", [_dec4], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "btnExpand", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "btnExpand", [_dec5], {
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "btnCollapse", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "btnCollapse", [_dec6], {
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "dif", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "expandTime", [property], {
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "opx", [_dec8], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "difh", [_dec9], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return 15;
+        }
+      }), _descriptor9 = _applyDecoratedDescriptor(_class2.prototype, "expandTime", [_dec10], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function initializer() {
           return 1.0;
-        }
-      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "_contentSize", [property], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: function initializer() {
-          return size();
         }
       })), _class2)) || _class));
       cclegacy._RF.pop();
