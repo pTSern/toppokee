@@ -52,7 +52,7 @@ System.register([], function (_export, _context) {
       _export("Application", Application = /*#__PURE__*/function () {
         function Application() {
           _classCallCheck(this, Application);
-          this.settingsPath = 'src/settings.f8c73.json';
+          this.settingsPath = 'src/settings.7a768.json';
           this.showFPS = true;
           this.timer = null;
         }

@@ -48781,24 +48781,6 @@ System.register("chunks:///_virtual/UIItemRoomMTT.ts", ['./rollupPluginModLoBabe
           this.lbTime.string = _hour.toString().padStart(2, "0") + ":" + _minute.toString().padStart(2, "0") + " " + _time;
           this.lbAmountPlayer.string = status === 'finished' ? "" + rankings.length : "" + registered_players;
         };
-        _proto._isJoinable = function _isJoinable(difm) {
-          if (difm === void 0) {
-            difm = 0;
-          }
-          var start_time = this._data.start_time;
-          var _sdate = new Date(start_time);
-          var _nowd = new Date();
-          var _diff = {
-            days: _sdate.getDate() - _nowd.getDate(),
-            hours: _sdate.getHours() - _nowd.getHours(),
-            minutes: _sdate.getMinutes() - _nowd.getMinutes()
-          };
-          var days = _diff.days,
-            hours = _diff.hours,
-            minutes = _diff.minutes;
-          var _is = days <= 0 && hours <= 0 && minutes - difm <= Duration.mtt.joinable_m;
-          return _is;
-        };
         _proto._actBtnSetup = function _actBtnSetup() {
           var _this6 = this;
           var _this$_data3 = this._data,
@@ -48810,7 +48792,8 @@ System.register("chunks:///_virtual/UIItemRoomMTT.ts", ['./rollupPluginModLoBabe
           var _now = Date.now();
           var _start = new Date(start_time);
           var _reg = start_time_reg ? new Date(start_time_reg) : new Date(new Date(start_time).valueOf() - 5 * 60 * 1000);
-          var _pre_join_time = _start.valueOf() - joinable_mms;
+          var _pre_join_timer = _start.valueOf() - joinable_mms;
+          var _pre_join_time = _pre_join_timer <= _reg.valueOf() ? _reg.valueOf() : _pre_join_timer;
           var _post_join_time = _start.valueOf() + post_join_mms;
           var _regable = _pre_join_time > _now && _now >= _reg.valueOf();
           var _joinable = _now >= _pre_join_time && _now <= _post_join_time;
@@ -49557,8 +49540,8 @@ System.register("chunks:///_virtual/UIKeepScale.ts", ['./rollupPluginModLoBabelH
   };
 });
 
-System.register("chunks:///_virtual/UIKickPlayer.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Enums.ts', './UIBase.ts', './EventManager.ts', './LanguageManager.ts', './GlobalConfig.ts', './AsyncUtils.ts', './ComponentUtils.ts', './ResponeCode.ts', './AssetManager.ts', './Decorators.ts', './UserCommand.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Sprite, Label, RichText, Layout, ProgressBar, UITransform, Node, Button, instantiate, Color, UIType, UIBase, pEventManager, LanguageMananger, GlobalConfig, pAsyncUtils, pComponentUtils, ResponseCode, NSAsset, pDecorators, request;
+System.register("chunks:///_virtual/UIKickPlayer.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Enums.ts', './EventManager.ts', './LanguageManager.ts', './GlobalConfig.ts', './AsyncUtils.ts', './ComponentUtils.ts', './ResponeCode.ts', './AssetManager.ts', './Decorators.ts', './UserCommand.ts', './MiniLoading.ts'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Sprite, Label, RichText, Layout, ProgressBar, UITransform, Node, Button, instantiate, Color, Component, UIType, pEventManager, LanguageMananger, GlobalConfig, pAsyncUtils, pComponentUtils, ResponseCode, NSAsset, pDecorators, request, MiniLoading;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -49580,10 +49563,9 @@ System.register("chunks:///_virtual/UIKickPlayer.ts", ['./rollupPluginModLoBabel
       Button = module.Button;
       instantiate = module.instantiate;
       Color = module.Color;
+      Component = module.Component;
     }, function (module) {
       UIType = module.UIType;
-    }, function (module) {
-      UIBase = module.UIBase;
     }, function (module) {
       pEventManager = module.pEventManager;
     }, function (module) {
@@ -49602,9 +49584,11 @@ System.register("chunks:///_virtual/UIKickPlayer.ts", ['./rollupPluginModLoBabel
       pDecorators = module.pDecorators;
     }, function (module) {
       request = module.default;
+    }, function (module) {
+      MiniLoading = module.MiniLoading;
     }],
     execute: function () {
-      var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11;
+      var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12;
       cclegacy._RF.push({}, "bd00e8AAhpLBIjJmFXyE7wW", "UIKickPlayer", undefined);
       var ccclass = _decorator.ccclass,
         property = _decorator.property;
@@ -49612,14 +49596,14 @@ System.register("chunks:///_virtual/UIKickPlayer.ts", ['./rollupPluginModLoBabel
         type: UIType,
         override: true,
         readonly: true
-      }), _dec3 = property(Sprite), _dec4 = property(Label), _dec5 = property(RichText), _dec6 = property(Layout), _dec7 = property(Sprite), _dec8 = property(ProgressBar), _dec9 = property(UITransform), _dec10 = property(Node), _dec11 = property(Button), _dec12 = property(Button), _dec(_class = (_class2 = /*#__PURE__*/function (_UIBase) {
-        _inheritsLoose(UIKickPlayerPopup, _UIBase);
+      }), _dec3 = property(Sprite), _dec4 = property(Label), _dec5 = property(RichText), _dec6 = property(Layout), _dec7 = property(Sprite), _dec8 = property(ProgressBar), _dec9 = property(UITransform), _dec10 = property(Node), _dec11 = property(Button), _dec12 = property(Button), _dec13 = property(MiniLoading), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+        _inheritsLoose(UIKickPlayerPopup, _Component);
         function UIKickPlayerPopup() {
           var _this;
           for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
             args[_key] = arguments[_key];
           }
-          _this = _UIBase.call.apply(_UIBase, [this].concat(args)) || this;
+          _this = _Component.call.apply(_Component, [this].concat(args)) || this;
           _initializerDefineProperty(_this, "uiType", _descriptor, _assertThisInitialized(_this));
           _initializerDefineProperty(_this, "sprAvatar", _descriptor2, _assertThisInitialized(_this));
           _initializerDefineProperty(_this, "lblName", _descriptor3, _assertThisInitialized(_this));
@@ -49631,11 +49615,19 @@ System.register("chunks:///_virtual/UIKickPlayer.ts", ['./rollupPluginModLoBabel
           _initializerDefineProperty(_this, "nodeButtons", _descriptor9, _assertThisInitialized(_this));
           _initializerDefineProperty(_this, "btnAccept", _descriptor10, _assertThisInitialized(_this));
           _initializerDefineProperty(_this, "btnReject", _descriptor11, _assertThisInitialized(_this));
+          _initializerDefineProperty(_this, "loading", _descriptor12, _assertThisInitialized(_this));
           _this._data = null;
           _this._events = [['onVoteKickPlayer', _this._onVoteKickPlayer, _assertThisInitialized(_this)]];
           return _this;
         }
         var _proto = UIKickPlayerPopup.prototype;
+        _proto.open = function open() {
+          this.node.active = true;
+        };
+        _proto.close = function close() {
+          pAsyncUtils.stop(this.uuid);
+          this.node.active = false;
+        };
         _proto.init = function init(msg) {
           var _this2 = this;
           this._data = msg;
@@ -49670,8 +49662,12 @@ System.register("chunks:///_virtual/UIKickPlayer.ts", ['./rollupPluginModLoBabel
           var _current = Math.abs(Date.now() - timestamp);
           var _left = Math.abs(timeout - _current);
           this.nodeButtons.active = !_isSelfKicked && !_isSelfRequest;
+          pAsyncUtils.stop(this.uuid);
           this.progress.progress = _left / timeout;
-          pAsyncUtils.countdown(_left / 1000, 0.1, function (_time) {
+          pAsyncUtils.countdown({
+            time: _left / 1000,
+            id: this.uuid
+          }, 0.1, function (_time) {
             return _this2.progress.progress = _time / timeout * 1000;
           }).then(function () {
             return _this2.close();
@@ -49701,14 +49697,19 @@ System.register("chunks:///_virtual/UIKickPlayer.ts", ['./rollupPluginModLoBabel
             }
           }
         };
-        _proto._onLoad = function _onLoad() {
-          this._addClickers([{
-            handlers: this._actReject,
-            target: this.btnReject
-          }, {
-            handlers: this._actAccept,
-            target: this.btnAccept
-          }]);
+        _proto.onLoad = function onLoad() {
+          this.loading.close();
+          pComponentUtils.appends({
+            _options: [{
+              _handlers: this._actReject,
+              _target: this.btnReject
+            }, {
+              _handlers: this._actAccept,
+              _target: this.btnAccept
+            }],
+            _type: Button.EventType.CLICK,
+            _binder: this
+          });
         };
         _proto._actReject = /*#__PURE__*/function () {
           var _actReject2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
@@ -49716,14 +49717,16 @@ System.register("chunks:///_virtual/UIKickPlayer.ts", ['./rollupPluginModLoBabel
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
-                  _context.next = 2;
+                  this.loading.show();
+                  _context.next = 3;
                   return request('voteKickPlayer', {
                     vote: false
                   });
-                case 2:
+                case 3:
                   _data = _context.sent;
+                  this.loading.close();
                   this._onVotted(_data);
-                case 4:
+                case 6:
                 case "end":
                   return _context.stop();
               }
@@ -49740,14 +49743,16 @@ System.register("chunks:///_virtual/UIKickPlayer.ts", ['./rollupPluginModLoBabel
             return _regeneratorRuntime().wrap(function _callee2$(_context2) {
               while (1) switch (_context2.prev = _context2.next) {
                 case 0:
-                  _context2.next = 2;
+                  this.loading.show();
+                  _context2.next = 3;
                   return request('voteKickPlayer', {
                     vote: true
                   });
-                case 2:
+                case 3:
                   _data = _context2.sent;
+                  this.loading.close();
                   this._onVotted(_data);
-                case 4:
+                case 6:
                 case "end":
                   return _context2.stop();
               }
@@ -49764,35 +49769,38 @@ System.register("chunks:///_virtual/UIKickPlayer.ts", ['./rollupPluginModLoBabel
             case ResponseCode.SUCCESS:
               {
                 this.nodeButtons.active = false;
-                this.log("DISABLE NODE");
                 break;
               }
           }
         };
         _proto.onEnable = function onEnable() {
           pEventManager.on(this._events);
+          pAsyncUtils.stop(this.uuid);
+          this.loading.close();
         };
         _proto.onDisable = function onDisable() {
           pEventManager.off(this._events);
         };
         _proto._onVoteKickPlayer = function _onVoteKickPlayer(data) {
           var msg = data.msg;
-          var type = msg.type,
-            reason = msg.reason;
+          var _ref = msg,
+            type = _ref.type,
+            reason = _ref.reason;
+          console.log("[_onVoteKickPlayer] >>>", data);
           if (type != 'result') return;
           if (reason === 'completed') {
             this.close();
             return;
           }
-          var result = msg.result;
-          this.log("VOTE KICK PLAYER >>", result);
+          var _ref2 = msg,
+            result = _ref2.result;
           var totalEligible = result.totalEligible,
             yesVotes = result.yesVotes,
             noVotes = result.noVotes;
           this._addVote(yesVotes, noVotes, totalEligible);
         };
         return UIKickPlayerPopup;
-      }(UIBase), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "uiType", [_dec2], {
+      }(Component), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "uiType", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,
@@ -49845,6 +49853,11 @@ System.register("chunks:///_virtual/UIKickPlayer.ts", ['./rollupPluginModLoBabel
         writable: true,
         initializer: null
       }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "btnReject", [_dec12], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "loading", [_dec13], {
         configurable: true,
         enumerable: true,
         writable: true,
@@ -57414,21 +57427,15 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
           this.notify.node.active = false;
         };
         _proto._onTableDeleted = function _onTableDeleted(data) {
-          var _this2 = this;
           var player = data.player;
           if (player.id === GlobalConfig.instance.getUserId()) return;
-          UINotice.instance.show('txt_title', 'txt_table_deleted', 'txt_btn_confirm', undefined, undefined, undefined, function () {
-            return _this2._actBackToMain();
-          });
+          UINotice.instance.show('txt_title', 'txt_table_deleted', 'txt_btn_confirm', undefined, undefined, undefined, this._actBackToMainDirty.bind(this));
         };
         _proto._onTableOwnerLeft = function _onTableOwnerLeft(data) {
-          var _this3 = this;
           var immediate = data.immediate,
             player = data.player;
           if (player.id === GlobalConfig.instance.getUserId()) return;
-          immediate ? UINotice.instance.show('txt_title', 'txt_table_owner_left_immidiate', 'txt_btn_confirm', undefined, undefined, undefined, function () {
-            return _this3._actBackToMain();
-          }) : NotifyToast.instance.showWithKey('txt_table_owner_left');
+          immediate ? UINotice.instance.show('txt_title', 'txt_table_owner_left_immidiate', 'txt_btn_confirm', undefined, undefined, undefined, this._actBackToMainDirty.bind(this)) : NotifyToast.instance.showWithKey('txt_table_owner_left');
         };
         _proto._onDestroy = function _onDestroy() {
           pEventManager.off(this._onceEventHandlers);
@@ -57548,7 +57555,6 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
           this.endMatch();
         };
         _proto._onKickedNotify = function _onKickedNotify(data) {
-          var _this4 = this;
           var msg = data.msg,
             code = data.code;
           var reason = msg.reason,
@@ -57564,9 +57570,7 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
                 find: "@duration",
                 replacer: blockDuration / 1000 + "s"
               }]
-            }, 'txt_btn_confirm2', undefined, undefined, undefined, function () {
-              return _this4._actBackToMain();
-            });
+            }, 'txt_btn_confirm2', undefined, undefined, undefined, this._actBackToMainDirty.bind(this));
           } else {
             NotifyToast.instance.showWithKey({
               key: 'txt_pre_kick_notify',
@@ -57632,7 +57636,7 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
           this.lbInscreaseBlinds.node.active = false;
         };
         _proto.actCountDownUpdateBlind = function actCountDownUpdateBlind(total, left) {
-          var _this5 = this;
+          var _this2 = this;
           this.lbInscreaseBlinds.node.active = true;
           this.lbInscreaseBlinds.string = LanguageMananger.getString({
             key: 'dynamic_mtt_increase_blinds',
@@ -57649,7 +57653,7 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
             id: this._acdmtt,
             time: left
           }, 1, function (_left) {
-            _this5.lbInscreaseBlinds.string = LanguageMananger.getString({
+            _this2.lbInscreaseBlinds.string = LanguageMananger.getString({
               key: 'dynamic_mtt_increase_blinds',
               replacers: [{
                 find: "@total",
@@ -57700,25 +57704,63 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
               break;
           }
         };
-        _proto.actBackToMain = function actBackToMain() {
-          UIController.Instance.close(UIType.MTT_RANKER, true);
-          UIController.Instance.close(UIType.SPIN_GAME, true);
-          var instance = PlayingController.instance;
-          var _gp = pDecorators.instance(UIGamePlay);
-          instance.actStopPlaying();
-          var _p = _gp.resetPosIndexItemPlayer();
-          pAsyncUtils.stop(this._acdmtt);
-          //this._uiSpinGame.close();
-
-          this.close();
-          return _p;
-        };
-        _proto._actBackToMain = /*#__PURE__*/function () {
+        _proto._actBackToMainDirty = /*#__PURE__*/function () {
+          var _actBackToMainDirty2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+            var instance;
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
+                case 0:
+                  instance = PlayingController.instance;
+                  (instance == null ? void 0 : instance.isMainSitDown) && pEventManager.invoke('onStandUp');
+                  _context2.next = 4;
+                  return UIController.Instance.open(UIType.PT_YARD, false);
+                case 4:
+                  pEventManager.invoke('onLeaveTable');
+                  return _context2.abrupt("return", this.actBackToMain());
+                case 6:
+                case "end":
+                  return _context2.stop();
+              }
+            }, _callee2, this);
+          }));
+          function _actBackToMainDirty() {
+            return _actBackToMainDirty2.apply(this, arguments);
+          }
+          return _actBackToMainDirty;
+        }();
+        _proto.actBackToMain = /*#__PURE__*/function () {
           var _actBackToMain2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
-            var _this6 = this;
-            var instance, loading, _onSuccess, onSuccess, onError, _onConfirm;
+            var instance, _gp;
             return _regeneratorRuntime().wrap(function _callee3$(_context3) {
               while (1) switch (_context3.prev = _context3.next) {
+                case 0:
+                  UIController.Instance.close(UIType.MTT_RANKER, true);
+                  UIController.Instance.close(UIType.SPIN_GAME, true);
+                  instance = PlayingController.instance;
+                  _gp = pDecorators.instance(UIGamePlay);
+                  instance.actStopPlaying();
+                  pAsyncUtils.stop(this._acdmtt);
+                  _context3.next = 8;
+                  return _gp.resetPosIndexItemPlayer();
+                case 8:
+                  this.close();
+                case 9:
+                case "end":
+                  return _context3.stop();
+              }
+            }, _callee3, this);
+          }));
+          function actBackToMain() {
+            return _actBackToMain2.apply(this, arguments);
+          }
+          return actBackToMain;
+        }();
+        _proto._actBackToMain = /*#__PURE__*/function () {
+          var _actBackToMain3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
+            var _this3 = this;
+            var instance, loading, _onSuccess, onSuccess, onError, _onConfirm;
+            return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+              while (1) switch (_context5.prev = _context5.next) {
                 case 0:
                   instance = PlayingController.instance;
                   loading = GlobalConfig.instance.loading;
@@ -57729,7 +57771,7 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
                     switch (msg.code) {
                       case ResponseCode.SUCCESS:
                         {
-                          _this6.actBackToMain();
+                          _this3.actBackToMain();
                           break;
                         }
                       case ResponseCode.ERROR:
@@ -57743,20 +57785,20 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
                     return loading.close();
                   };
                   _onConfirm = /*#__PURE__*/function () {
-                    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-                      return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-                        while (1) switch (_context2.prev = _context2.next) {
+                    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
+                      return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+                        while (1) switch (_context4.prev = _context4.next) {
                           case 0:
                             loading.open();
-                            _context2.next = 3;
+                            _context4.next = 3;
                             return instance.leaveTable(onSuccess, onError);
                           case 3:
                             loading.close();
                           case 4:
                           case "end":
-                            return _context2.stop();
+                            return _context4.stop();
                         }
-                      }, _callee2);
+                      }, _callee4);
                     }));
                     return function _onConfirm() {
                       return _ref.apply(this, arguments);
@@ -57765,12 +57807,12 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
                   instance.leaveRoomChecker(_onConfirm, _onSuccess);
                 case 7:
                 case "end":
-                  return _context3.stop();
+                  return _context5.stop();
               }
-            }, _callee3);
+            }, _callee5);
           }));
           function _actBackToMain() {
-            return _actBackToMain2.apply(this, arguments);
+            return _actBackToMain3.apply(this, arguments);
           }
           return _actBackToMain;
         }();
@@ -57795,29 +57837,29 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
           });
         };
         _proto._actChangeRoom = /*#__PURE__*/function () {
-          var _actChangeRoom2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
+          var _actChangeRoom2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
             var rs;
-            return _regeneratorRuntime().wrap(function _callee4$(_context4) {
-              while (1) switch (_context4.prev = _context4.next) {
+            return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+              while (1) switch (_context6.prev = _context6.next) {
                 case 0:
                   PlayingController.instance.actStopPlaying();
-                  _context4.next = 3;
+                  _context6.next = 3;
                   return this._noActionOnPlaying('txt_notice_warning_switch_room');
                 case 3:
-                  rs = _context4.sent;
+                  rs = _context6.sent;
                   if (rs) {
-                    _context4.next = 6;
+                    _context6.next = 6;
                     break;
                   }
-                  return _context4.abrupt("return");
+                  return _context6.abrupt("return");
                 case 6:
-                  _context4.next = 8;
+                  _context6.next = 8;
                   return this.actChangeRoom();
                 case 8:
                 case "end":
-                  return _context4.stop();
+                  return _context6.stop();
               }
-            }, _callee4, this);
+            }, _callee6, this);
           }));
           function _actChangeRoom() {
             return _actChangeRoom2.apply(this, arguments);
@@ -57825,39 +57867,39 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
           return _actChangeRoom;
         }();
         _proto.actChangeRoom = /*#__PURE__*/function () {
-          var _actChangeRoom3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
+          var _actChangeRoom3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7() {
             var _pInstance, statusMainPlayer, tableData, instance, extendData, _tables, tables, _get, tid, res, rez, dataTabelResult;
-            return _regeneratorRuntime().wrap(function _callee5$(_context5) {
-              while (1) switch (_context5.prev = _context5.next) {
+            return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+              while (1) switch (_context7.prev = _context7.next) {
                 case 0:
                   _pInstance = PlayingController.instance;
                   statusMainPlayer = _pInstance.mainState, tableData = _pInstance.tableData;
                   if (!(statusMainPlayer == EStatusPlayer.JOIN_GAME)) {
-                    _context5.next = 5;
+                    _context7.next = 5;
                     break;
                   }
-                  _context5.next = 5;
+                  _context7.next = 5;
                   return _pInstance.actStandUp();
                 case 5:
                   instance = GlobalConfig.instance;
                   instance.loading.open();
-                  _context5.prev = 7;
+                  _context7.prev = 7;
                   extendData = this.table.data;
                   _pInstance.setRoom('PT');
-                  _context5.next = 12;
+                  _context7.next = 12;
                   return MainScreenController.getTables(tableData.data.zone);
                 case 12:
-                  _tables = _context5.sent;
+                  _tables = _context7.sent;
                   tables = _tables.filter(function (e) {
                     return e.smallBlind <= extendData.smallBlind;
                   });
                   if (!(tables.length <= 0)) {
-                    _context5.next = 17;
+                    _context7.next = 17;
                     break;
                   }
                   //INVOKE ERROR POPUP
                   instance.loading.close();
-                  return _context5.abrupt("return");
+                  return _context7.abrupt("return");
                 case 17:
                   _get = function _get() {
                     var idx = randomRangeInt(0, tables.length);
@@ -57866,29 +57908,29 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
                     return table;
                   };
                   tid = _get().id;
-                  _context5.prev = 19;
-                  _context5.next = 22;
+                  _context7.prev = 19;
+                  _context7.next = 22;
                   return request('switchTable', {
                     tid: tid
                   });
                 case 22:
-                  res = _context5.sent;
-                  _context5.t0 = res.code;
-                  _context5.next = _context5.t0 === ResponseCode.ERROR ? 26 : _context5.t0 === ResponseCode.SUCCESS ? 28 : 41;
+                  res = _context7.sent;
+                  _context7.t0 = res.code;
+                  _context7.next = _context7.t0 === ResponseCode.ERROR ? 26 : _context7.t0 === ResponseCode.SUCCESS ? 28 : 41;
                   break;
                 case 26:
                   instance.loading.close();
-                  return _context5.abrupt("return");
+                  return _context7.abrupt("return");
                 case 28:
-                  _context5.next = 30;
+                  _context7.next = 30;
                   return request('joinTable', {
                     tid: res.tid
                   });
                 case 30:
-                  rez = _context5.sent;
+                  rez = _context7.sent;
                   instance.loading.close();
-                  _context5.t1 = rez.code;
-                  _context5.next = _context5.t1 === ResponseCode.SUCCESS ? 35 : _context5.t1 === ResponseCode.ERROR ? 38 : 40;
+                  _context7.t1 = rez.code;
+                  _context7.next = _context7.t1 === ResponseCode.SUCCESS ? 35 : _context7.t1 === ResponseCode.ERROR ? 38 : 40;
                   break;
                 case 35:
                   dataTabelResult = _extends({}, rez.tableInfo, {
@@ -57896,33 +57938,33 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
                     isPrivate: false
                   });
                   pDecorators.instance(GameManager).joinTable(dataTabelResult, rez.msg);
-                  return _context5.abrupt("break", 40);
+                  return _context7.abrupt("break", 40);
                 case 38:
                   this.log("Joint Failed");
-                  return _context5.abrupt("break", 40);
+                  return _context7.abrupt("break", 40);
                 case 40:
-                  return _context5.abrupt("break", 41);
+                  return _context7.abrupt("break", 41);
                 case 41:
-                  _context5.next = 47;
+                  _context7.next = 47;
                   break;
                 case 43:
-                  _context5.prev = 43;
-                  _context5.t2 = _context5["catch"](19);
+                  _context7.prev = 43;
+                  _context7.t2 = _context7["catch"](19);
                   instance.loading.close();
-                  this.error('[UIPlayingScene] Error >> ', _context5.t2);
+                  this.error('[UIPlayingScene] Error >> ', _context7.t2);
                 case 47:
-                  _context5.next = 53;
+                  _context7.next = 53;
                   break;
                 case 49:
-                  _context5.prev = 49;
-                  _context5.t3 = _context5["catch"](7);
+                  _context7.prev = 49;
+                  _context7.t3 = _context7["catch"](7);
                   instance.loading.close();
-                  this.error('[UIPlayingScene] Error >> ', _context5.t3);
+                  this.error('[UIPlayingScene] Error >> ', _context7.t3);
                 case 53:
                 case "end":
-                  return _context5.stop();
+                  return _context7.stop();
               }
-            }, _callee5, this, [[7, 49], [19, 43]]);
+            }, _callee7, this, [[7, 49], [19, 43]]);
           }));
           function actChangeRoom() {
             return _actChangeRoom3.apply(this, arguments);
@@ -57947,7 +57989,7 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
           UIController.Instance.open(UIType.MINI_GAME);
         };
         _proto.showBuyInPopup = function showBuyInPopup(table, onBuy, onCancel) {
-          var _this7 = this;
+          var _this4 = this;
           var maxBuyIn = table.maxBuyIn,
             minBuyIn = table.minBuyIn;
           this._uiPopupBuyChip.open();
@@ -57955,24 +57997,24 @@ System.register("chunks:///_virtual/UIPlayingScene.ts", ['./rollupPluginModLoBab
             UINotice.instance.show('txt_title_system_warning', 'txt_notifi_not_money_buy_in', 'txt_btn_buy_chip', function () {
               return UIController.Instance.open(UIType.SHOP, false, true, true, EShopType.MY_PROPS);
             }, 'txt_btn_change_room', function () {
-              return _this7.actChangeRoom();
+              return _this4.actChangeRoom();
             });
           });
         };
         _proto.showPopupProfilePlayer = /*#__PURE__*/function () {
-          var _showPopupProfilePlayer = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(dataPlayer) {
-            return _regeneratorRuntime().wrap(function _callee6$(_context6) {
-              while (1) switch (_context6.prev = _context6.next) {
+          var _showPopupProfilePlayer = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8(dataPlayer) {
+            return _regeneratorRuntime().wrap(function _callee8$(_context8) {
+              while (1) switch (_context8.prev = _context8.next) {
                 case 0:
-                  _context6.next = 2;
+                  _context8.next = 2;
                   return this._uiPopupProfilePLayer.init(dataPlayer, this.table.data.isPrivate, PlayingController.instance.room);
                 case 2:
                   this._uiPopupProfilePLayer.open();
                 case 3:
                 case "end":
-                  return _context6.stop();
+                  return _context8.stop();
               }
-            }, _callee6, this);
+            }, _callee8, this);
           }));
           function showPopupProfilePlayer(_x) {
             return _showPopupProfilePlayer.apply(this, arguments);
@@ -76087,7 +76129,6 @@ System.register("chunks:///_virtual/YardGamePlayer.ts", ['./rollupPluginModLoBab
           return 100;
         };
         _proto.leaveRoomChecker = function leaveRoomChecker(onConfirm, onSuccess) {
-          console.log('[LEAVE ROOM CHECKER] >>>', this.table);
           if (!this.table) {
             onConfirm();
             return;
