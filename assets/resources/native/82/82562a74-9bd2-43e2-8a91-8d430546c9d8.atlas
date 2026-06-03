@@ -1,0 +1,83 @@
+
+anim_table1.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 277
+  size: 1643, 736
+  orig: 1643, 736
+  offset: 0, 0
+  index: -1
+10
+  rotate: false
+  xy: 2, 2
+  size: 86, 51
+  orig: 86, 51
+  offset: 0, 0
+  index: -1
+11
+  rotate: true
+  xy: 1847, 705
+  size: 86, 51
+  orig: 86, 51
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 1647, 793
+  size: 285, 220
+  orig: 285, 220
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 2, 55
+  size: 361, 220
+  orig: 361, 220
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 365, 55
+  size: 257, 220
+  orig: 257, 220
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 1647, 582
+  size: 198, 209
+  orig: 198, 209
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 624, 78
+  size: 174, 92
+  orig: 174, 92
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 1647, 487
+  size: 176, 93
+  orig: 176, 93
+  offset: 0, 0
+  index: -1
+8
+  rotate: true
+  xy: 1934, 819
+  size: 194, 103
+  orig: 194, 103
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 624, 172
+  size: 193, 103
+  orig: 193, 103
+  offset: 0, 0
+  index: -1

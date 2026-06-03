@@ -1,0 +1,76 @@
+
+anim_allinfx.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+10
+  rotate: false
+  xy: 2, 450
+  size: 548, 549
+  orig: 548, 549
+  offset: 0, 0
+  index: -1
+11
+  rotate: false
+  xy: 861, 923
+  size: 84, 76
+  orig: 84, 76
+  offset: 0, 0
+  index: -1
+13
+  rotate: false
+  xy: 2, 149
+  size: 300, 299
+  orig: 300, 299
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 552, 575
+  size: 218, 133
+  orig: 218, 133
+  offset: 0, 0
+  index: -1
+4
+  rotate: true
+  xy: 304, 191
+  size: 257, 134
+  orig: 257, 134
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 552, 856
+  size: 307, 143
+  orig: 307, 143
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 552, 710
+  size: 241, 144
+  orig: 241, 144
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 2, 2
+  size: 267, 145
+  orig: 267, 145
+  offset: 0, 0
+  index: -1
+8
+  rotate: true
+  xy: 440, 153
+  size: 295, 74
+  orig: 295, 74
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 552, 500
+  size: 186, 73
+  orig: 186, 73
+  offset: 0, 0
+  index: -1

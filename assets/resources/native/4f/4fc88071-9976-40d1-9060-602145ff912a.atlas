@@ -1,0 +1,48 @@
+
+anim_background1.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 639
+  size: 1441, 121
+  orig: 1441, 121
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 2, 424
+  size: 198, 213
+  orig: 198, 213
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 2, 209
+  size: 198, 213
+  orig: 198, 213
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 202, 432
+  size: 190, 205
+  orig: 190, 205
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 2, 2
+  size: 190, 205
+  orig: 190, 205
+  offset: 0, 0
+  index: -1
+bg
+  rotate: false
+  xy: 2, 762
+  size: 1922, 1082
+  orig: 1922, 1082
+  offset: 0, 0
+  index: -1

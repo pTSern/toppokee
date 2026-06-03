@@ -1,0 +1,48 @@
+
+player_win_effect.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+22
+  rotate: false
+  xy: 290, 196
+  size: 72, 49
+  orig: 72, 49
+  offset: 0, 0
+  index: -1
+33
+  rotate: false
+  xy: 210, 105
+  size: 72, 60
+  orig: 72, 60
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 2, 39
+  size: 206, 206
+  orig: 206, 206
+  offset: 0, 0
+  index: -1
+44
+  rotate: false
+  xy: 2, 2
+  size: 72, 35
+  orig: 72, 35
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 210, 167
+  size: 78, 78
+  orig: 78, 78
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 210, 85
+  size: 20, 18
+  orig: 20, 18
+  offset: 0, 0
+  index: -1

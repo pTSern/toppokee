@@ -1,0 +1,103 @@
+
+table_caocap.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 1410
+  size: 1922, 558
+  orig: 1922, 558
+  offset: 0, 0
+  index: -1
+10
+  rotate: false
+  xy: 2, 789
+  size: 1624, 619
+  orig: 1624, 619
+  offset: 0, 0
+  index: -1
+11
+  rotate: true
+  xy: 1971, 1432
+  size: 86, 51
+  orig: 86, 51
+  offset: 0, 0
+  index: -1
+12
+  rotate: false
+  xy: 1926, 1379
+  size: 86, 51
+  orig: 86, 51
+  offset: 0, 0
+  index: -1
+13
+  rotate: false
+  xy: 2, 347
+  size: 1416, 440
+  orig: 1416, 440
+  offset: 0, 0
+  index: -1
+2
+  rotate: true
+  xy: 1926, 1723
+  size: 245, 64
+  orig: 245, 64
+  offset: 0, 0
+  index: -1
+3
+  rotate: true
+  xy: 1926, 1723
+  size: 245, 64
+  orig: 245, 64
+  offset: 0, 0
+  index: -1
+4
+  rotate: true
+  xy: 1926, 1723
+  size: 245, 64
+  orig: 245, 64
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 2, 2
+  size: 1553, 343
+  orig: 1553, 343
+  offset: 0, 0
+  index: -1
+7
+  rotate: true
+  xy: 1992, 1520
+  size: 222, 43
+  orig: 222, 43
+  offset: 0, 0
+  index: -1
+8
+  rotate: true
+  xy: 1992, 1744
+  size: 224, 43
+  orig: 224, 43
+  offset: 0, 0
+  index: -1
+9
+  rotate: true
+  xy: 1926, 1499
+  size: 222, 43
+  orig: 222, 43
+  offset: 0, 0
+  index: -1
+
+table_caocap2.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+5
+  rotate: false
+  xy: 2, 2
+  size: 1596, 306
+  orig: 1596, 306
+  offset: 0, 0
+  index: -1

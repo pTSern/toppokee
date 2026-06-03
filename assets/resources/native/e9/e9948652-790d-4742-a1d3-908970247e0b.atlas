@@ -1,0 +1,69 @@
+
+anim_loading.png
+size: 512,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 266, 2
+  size: 88, 58
+  orig: 88, 58
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 356, 2
+  size: 80, 58
+  orig: 80, 58
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 438, 2
+  size: 67, 58
+  orig: 67, 58
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 2, 14
+  size: 45, 30
+  orig: 45, 30
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 49, 14
+  size: 45, 30
+  orig: 45, 30
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 96, 14
+  size: 45, 30
+  orig: 45, 30
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 143, 14
+  size: 41, 30
+  orig: 41, 30
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 2, 46
+  size: 262, 14
+  orig: 262, 14
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 186, 30
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1

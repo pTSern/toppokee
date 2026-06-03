@@ -1,0 +1,97 @@
+
+chip_anim.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 270, 40
+  size: 86, 86
+  orig: 86, 86
+  offset: 0, 0
+  index: -1
+10
+  rotate: false
+  xy: 600, 40
+  size: 68, 86
+  orig: 68, 86
+  offset: 0, 0
+  index: -1
+11
+  rotate: false
+  xy: 443, 40
+  size: 79, 86
+  orig: 79, 86
+  offset: 0, 0
+  index: -1
+12
+  rotate: false
+  xy: 2, 37
+  size: 87, 89
+  orig: 87, 89
+  offset: 0, 0
+  index: -1
+13
+  rotate: false
+  xy: 181, 40
+  size: 87, 86
+  orig: 87, 86
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 91, 40
+  size: 88, 86
+  orig: 88, 86
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 358, 40
+  size: 83, 86
+  orig: 83, 86
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 524, 40
+  size: 74, 86
+  orig: 74, 86
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 670, 40
+  size: 63, 86
+  orig: 63, 86
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 791, 40
+  size: 45, 86
+  orig: 45, 86
+  offset: 0, 0
+  index: -1
+7
+  rotate: true
+  xy: 2, 9
+  size: 26, 86
+  orig: 26, 86
+  offset: 0, 0
+  index: -1
+8
+  rotate: true
+  xy: 91, 2
+  size: 36, 91
+  orig: 36, 91
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 735, 40
+  size: 54, 86
+  orig: 54, 86
+  offset: 0, 0
+  index: -1
