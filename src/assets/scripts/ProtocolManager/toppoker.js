@@ -1677,5 +1677,5 @@ const Toppoker = function() {
 
   //
   const toppoker = new Toppoker();
+globalThis.toppoker = toppoker;
 
-module.exports = toppoker
